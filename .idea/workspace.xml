@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="Radio.js component" />
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="Radio.js component">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +65,7 @@
       <workItem from="1674315345340" duration="765000" />
       <workItem from="1674383629374" duration="2756000" />
       <workItem from="1674386433054" duration="2412000" />
+      <workItem from="1674493635185" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -85,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674388847093</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Radio.js component">
+      <created>1674494508254</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674494508254</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
