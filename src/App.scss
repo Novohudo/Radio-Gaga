@@ -10,45 +10,55 @@
 body {
   background-color: black;
   color: rgb(235, 235, 235);
-  font-family: "Architects Daughter";
+  font-family: "Helvetica";
 }
 
 h1 {
   margin: 1em 0 0 0;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #6141ff;
 }
 
 h2 {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 .radio {
   max-width: 60em;
   width: 100%;
+
 }
 
 .filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
   font-size: 1.2rem;
   width: 100%;
 
+
+
   span {
     margin: 0.25em;
-    border: 1px solid #e36bae;
     border-radius: 10px;
     padding: 0.25em 0.75em;
+    border:2px solid #3700ff;
+    transition-duration: 1s;
 
     &:hover {
       cursor: pointer;
-      background: linear-gradient(to bottom right, #e36bae, #fb743e);
+      border-color: #9ecaed;
+      box-shadow: 0 0 5px #9ecaed;
     }
   }
 
   .selected {
-    background: linear-gradient(to bottom right, #e36bae, #fb743e);
+    border-color: #9ecaed;
+    box-shadow: 0 0 15px #9ecaed;
+
   }
 }
 
@@ -60,7 +70,7 @@ h2 {
 
 .station {
   font-size: 1.2em;
-  border: 1px solid rgb(76, 62, 95);
+  border: 2px solid #3700ff;
   margin: 0.25em;
   border-radius: 10px;
   padding: 1em;
@@ -68,9 +78,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition-duration: 1s;
 
   &:hover {
-    border-color: #e36bae;
+    border-color: #9ecaed;
   }
 }
 
@@ -90,10 +101,11 @@ h2 {
 
 img {
   display: block;
-  width: 2.5em;
-  height: 2.5em;
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 50%;
-  border: 2px solid rgb(76, 62, 95);
+  border: none;
+  box-shadow: 0 0 15px #9ecaed;
   margin: 0 0.25em;
 }
 
@@ -102,19 +114,24 @@ audio {
 }
 
 .rhap_container.player {
-  background-color: rgb(76, 62, 95);
+  background-color:black;
+  border: 1px solid #3700ff;
   display: flex;
   justify-items: center;
   padding: 0.25em 0.75em;
   border-radius: 10px;
+  height: 6rem;
+  text-align: center;
+  color: gold;
 }
 
 .rhap_stacked .rhap_controls-section {
   margin-top: 0 !important;
+
 }
 
 .rhap_controls-section .rhap_volume-controls {
-  justify-content: center;
+  justify-content: right;
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
@@ -122,7 +139,7 @@ audio {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: #e36bae !important;
+  fill: gold !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -131,6 +148,19 @@ audio {
   }
 
   img {
-    display: none;
+    width: 7em;
+    height: 7em;
+    margin-bottom:3em;
+  }
+  .stationName {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    &:hover {
+      border-color: #9ecaed;
+    }
   }
 }

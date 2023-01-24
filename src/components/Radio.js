@@ -9,6 +9,7 @@ export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
 	const [stream, setStream] = useState('')
+	const [selected,setSelected] = useState(false)
 
 	useEffect(() => {
 		setupApi(stationFilter).then(data => {
@@ -18,6 +19,10 @@ export default function Radio() {
 
 	const setDefaultSrc = event => {
 		event.target.src = error
+	}
+
+	function active(){
+		setSelected(true)
 	}
 
 	return (
@@ -47,16 +52,20 @@ export default function Radio() {
 				{stations &&
 					stations.map((station, index) => {
 						return (
+
 							<div className="station" key={index} onClick={() => setStream(station)}>
+
 								<div className="stationName">
+
 									<img
 										className="logo"
 										src={station.favicon}
 										alt="station logo"
 										onError={setDefaultSrc}
 									/>
+
 									<div className="name">{station.name}</div>
-									{station.bitrate}
+									<div>btr:{station.bitrate}</div>
 								</div>
 							</div>
 						)

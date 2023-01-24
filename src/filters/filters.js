@@ -10,7 +10,6 @@ export const filters = [
 	"rap",
 	"retro",
 	"rock",
-	"electric",
 	"folk",
 	"atmospheric",
 ]
