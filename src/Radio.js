@@ -30,8 +30,9 @@ export default function Radio() {
 
 	const setupApi = async stationFilter => {
 		const api = new RadioBrowserApi("My Radio App")
+		api.setBaseUrl('https://de1.api.radio-browser.info/')
 		const stations = await api.searchStations({
-			language: "english",
+			"country":"America",
 			tag: stationFilter,
 			limit: 30,
 		})
@@ -81,6 +82,7 @@ export default function Radio() {
 										onError={setDefaultSrc}
 									/>
 									<div className="name">{station.name}</div>
+									{station.bitrate}
 								</div>
 							</div>
 						)
