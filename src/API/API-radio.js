@@ -1,10 +1,10 @@
 import {RadioBrowserApi} from "radio-browser-api";
 
-export const setupApi = async stationFilter => {
+export const SetupApi = async( stationFilter,selectedCountry) => {
 	const api = new RadioBrowserApi("My Radio App")
 	api.setBaseUrl('https://de1.api.radio-browser.info/')
 	const stations = await api.searchStations({
-		"country":"America",
+		"country":selectedCountry,
 		tag: stationFilter,
 		limit: 30,
 	})
@@ -12,4 +12,5 @@ export const setupApi = async stationFilter => {
 		return data
 	})
 	return stations
+
 }

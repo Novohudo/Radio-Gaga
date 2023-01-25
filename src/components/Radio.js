@@ -2,27 +2,25 @@ import React, {useEffect, useState} from 'react';
 import H5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css"
 import error from "../img/radio.svg"
-import {filters} from "../filters/filters";
-import {setupApi} from "../API/API-radio";
+import {countries, filters} from "../filters/filters";
+import {SetupApi} from "../API/API-radio";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
 	const [stream, setStream] = useState('')
-	const [selected,setSelected] = useState(false)
+	const [selectedCountry,setSelectedCountry] = useState(null)
+
+
 
 	useEffect(() => {
-		setupApi(stationFilter).then(data => {
+		SetupApi(stationFilter,selectedCountry).then(data => {
 			setStations(data)
 		})
-	}, [stationFilter])
+	}, [stationFilter,selectedCountry])
 
 	const setDefaultSrc = event => {
 		event.target.src = error
-	}
-
-	function active(){
-		setSelected(true)
 	}
 
 	return (
@@ -37,6 +35,18 @@ export default function Radio() {
 				customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
 				autoPlayAfterSrcChange={true}
 			/>
+			<h3>Choose country</h3>
+			<div className={"countries"}>
+				{countries.map((country,index)=>(
+					<span
+						className={selectedCountry === country ? "selected" : ""}
+						key={index}
+						onClick={()=>setSelectedCountry(country)}>
+						{country}
+					</span>
+				))}
+			</div>
+			<h3>Pick a genre</h3>
 			<div className="filters">
 				{filters.map((filter, index) => (
 					<span

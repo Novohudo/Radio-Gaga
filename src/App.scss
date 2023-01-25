@@ -12,9 +12,11 @@ body {
   color: rgb(235, 235, 235);
   font-family: "Helvetica";
 }
-
+h1,h2,h3{
+  text-align: center;
+}
 h1 {
-  margin: 1em 0 0 0;
+  margin: 0.1em 0 0 0;
   font-size: 2rem;
   color: #6141ff;
 }
@@ -24,12 +26,38 @@ h2 {
   text-align: center;
 }
 
+
 .radio {
   max-width: 60em;
   width: 100%;
 
 }
+.countries{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-size: 1.2rem;
+  width: 100%;
+  span{
+    margin: 0.25em;
+    border-radius: 10px;
+    padding: 0.25em 0.75em;
+    border:2px solid #3700ff;
+    transition-duration: 1s;
+    &:hover{
+      cursor: pointer;
+      border-color: #9ecaed;
+      box-shadow: 0 0 5px #9ecaed;
+    }
+  }
+  .selected {
+    border-color: #9ecaed;
+    box-shadow: 0 0 15px #9ecaed;
 
+  }
+}
 .filters {
   display: flex;
   justify-content: center;
@@ -38,7 +66,6 @@ h2 {
   margin-top: 1em;
   font-size: 1.2rem;
   width: 100%;
-
 
 
   span {
@@ -66,6 +93,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   width: 100%;
+
 }
 
 .station {
@@ -119,6 +147,7 @@ audio {
   display: flex;
   justify-items: center;
   padding: 0.25em 0.75em;
+  margin: 1em 0 0 0;
   border-radius: 10px;
   height: 6rem;
   text-align: center;

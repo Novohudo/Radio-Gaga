@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="structure change">
-      <change afterPath="$PROJECT_DIR$/src/img/radio.svg" afterDir="false" />
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="style-update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/API-radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API-radio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
@@ -87,7 +87,8 @@
       <workItem from="1674383629374" duration="2756000" />
       <workItem from="1674386433054" duration="2412000" />
       <workItem from="1674493635185" duration="3086000" />
-      <workItem from="1674497668497" duration="14518000" />
+      <workItem from="1674497668497" duration="15560000" />
+      <workItem from="1674664532224" duration="5760000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674576032538</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="style-update">
+      <created>1674583758359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674583758359</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +171,7 @@
     <MESSAGE value="http.fix" />
     <MESSAGE value="setBaseUrl(fix)" />
     <MESSAGE value="structure change" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure change" />
+    <MESSAGE value="style-update" />
+    <option name="LAST_COMMIT_MESSAGE" value="style-update" />
   </component>
 </project>

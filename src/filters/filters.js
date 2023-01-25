@@ -13,3 +13,14 @@ export const filters = [
 	"folk",
 	"atmospheric",
 ]
+export const countries = [
+	"Poland",
+	"Ukrainian",
+	"America",
+	"Switzerland",
+	"Germany",
+	"China",
+	"Russian",
+	"France",
+	"Great Britain",
+]
