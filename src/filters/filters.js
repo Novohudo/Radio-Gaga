@@ -15,7 +15,7 @@ export const filters = [
 ]
 export const countries = [
 	"Poland",
-	"Ukrainian",
+	"Ukraine",
 	"America",
 	"Switzerland",
 	"Germany",

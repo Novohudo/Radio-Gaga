@@ -12,20 +12,32 @@ body {
   color: rgb(235, 235, 235);
   font-family: "Helvetica";
 }
-h1,h2,h3{
+h2,h3{
   text-align: center;
 }
 h1 {
-  margin: 0.1em 0 0 0;
-  font-size: 2rem;
+  text-align: right;
+  font-size: 0.5rem;
   color: #6141ff;
+
 }
 
 h2 {
   margin-bottom: 1em;
   text-align: center;
 }
-
+.player-body{
+  display: flex;
+}
+.station-logo{
+  display: block;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 15px #9ecaed;
+  margin: 0 0.25em;
+}
 
 .radio {
   max-width: 60em;
@@ -142,8 +154,8 @@ audio {
 }
 
 .rhap_container.player {
-  background-color:black;
-  border: 1px solid #3700ff;
+  background-color: rgba(0, 0, 0, 0);
+  //border: 1px solid #3700ff;
   display: flex;
   justify-items: center;
   padding: 0.25em 0.75em;
@@ -161,10 +173,11 @@ audio {
 
 .rhap_controls-section .rhap_volume-controls {
   justify-content: right;
+  svg{color: gold;}
 }
-
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
-  fill: rgb(235, 235, 235) !important;
+  fill: rgb(255, 255, 255) !important;
+
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {

@@ -11,8 +11,6 @@ export default function Radio() {
 	const [stream, setStream] = useState('')
 	const [selectedCountry,setSelectedCountry] = useState(null)
 
-
-
 	useEffect(() => {
 		SetupApi(stationFilter,selectedCountry).then(data => {
 			setStations(data)
@@ -25,16 +23,21 @@ export default function Radio() {
 
 	return (
 		<div className="radio">
-			<H5AudioPlayer
-				header={stream.name}
-				className={"player"}
-				src={stream.urlResolved}
-				showJumpControls={false}
-				layout={"stacked"}
-				customProgressBarSection={[]}
-				customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
-				autoPlayAfterSrcChange={true}
-			/>
+			<h1>GAGA Radio Player</h1>
+			<div className={"player-body"}>
+				<img className={"station-logo"} src={stream.favicon || error}/>
+				<H5AudioPlayer
+					header={stream.name}
+					className={"player"}
+					src={stream.urlResolved}
+					layout={"stacked-reverse"}
+					showDownloadProgress={true}
+					showJumpControls={false}
+					customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
+					autoPlayAfterSrcChange={true}
+				/>
+			</div>
+
 			<h3>Choose country</h3>
 			<div className={"countries"}>
 				{countries.map((country,index)=>(
@@ -72,15 +75,13 @@ export default function Radio() {
 										src={station.favicon}
 										alt="station logo"
 										onError={setDefaultSrc}
-									/>
 
-									<div className="name">{station.name}</div>
-									<div>btr:{station.bitrate}</div>
+									/>
+									<div className="name">{station.name} btr:{station.bitrate}</div>
 								</div>
 							</div>
 						)
 					})}
-
 			</div>
 
 		</div>
