@@ -3,7 +3,7 @@ import Radio from "./components/Radio";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App" id={"box"}>
 			<Radio/>
 		</div>
 	);

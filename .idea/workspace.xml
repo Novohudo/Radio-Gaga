@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="country-pick">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="ui modification(0.1)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filters/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/filters/filters.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,9 @@
       <workItem from="1674386433054" duration="2412000" />
       <workItem from="1674493635185" duration="3086000" />
       <workItem from="1674497668497" duration="15560000" />
-      <workItem from="1674664532224" duration="10632000" />
+      <workItem from="1674664532224" duration="12695000" />
+      <workItem from="1674979495989" duration="1706000" />
+      <workItem from="1674985490305" duration="6684000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674670607027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ui modification(0.1)">
+      <created>1674938204137</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674938204137</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +186,7 @@
     <MESSAGE value="structure change" />
     <MESSAGE value="style-update" />
     <MESSAGE value="country-pick" />
-    <option name="LAST_COMMIT_MESSAGE" value="country-pick" />
+    <MESSAGE value="ui modification(0.1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui modification(0.1)" />
   </component>
 </project>

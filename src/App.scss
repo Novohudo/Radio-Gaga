@@ -1,35 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
-
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 15px;
-}
-
-body {
-  background-color: black;
-  color: rgb(235, 235, 235);
-  font-family: "Helvetica";
-}
-h2,h3{
-  text-align: center;
-}
-h1 {
-  text-align: right;
-  font-size: 0.5rem;
-  color: #6141ff;
+html{
+  border: 5px solid #0004ff;
 
 }
-
-h2 {
-  margin-bottom: 1em;
-  text-align: center;
-}
-.player-body{
-  display: flex;
-}
-.station-logo{
+@mixin logoImage {
   display: block;
   width: 7em;
   height: 7em;
@@ -38,13 +12,79 @@ h2 {
   box-shadow: 0 0 15px #9ecaed;
   margin: 0 0.25em;
 }
+@mixin mainShadow{
+  box-shadow: 0 0 5px #9ecaed;
+}
+@mixin border{
+  border-bottom: 3px solid grey;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  //margin: 15px;
+
+}
+
+body {
+  background-color: black;
+  color: rgb(235, 235, 235);
+  font-family: "Helvetica";
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+h1 {
+  text-align: right;
+  padding-right: 12px;
+  font-size: 0.5rem;
+  color: #6141ff;
+}
+
+h2 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.player-body {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  position: sticky;
+  top: 0px;
+  height: 9em;
+  @include border;
+}
+
+.static-logo {
+  @include logoImage;
+  box-shadow: none;
+  transition-duration: 1s;
+}
+.animated-logo {
+  @include logoImage;
+  box-shadow: 0 0 25px #9ecaed;
+  transition-duration: 1s;
+  animation: rotation 7.5s infinite linear;
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
 
 .radio {
   max-width: 60em;
   width: 100%;
-
 }
-.countries{
+
+.countries {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -52,24 +92,28 @@ h2 {
   margin-top: 1em;
   font-size: 1.2rem;
   width: 100%;
-  span{
+  cursor: pointer;
+  span {
     margin: 0.25em;
     border-radius: 10px;
     padding: 0.25em 0.75em;
-    border:2px solid #3700ff;
+    border: 2px solid #3700ff;
     transition-duration: 1s;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
       border-color: #9ecaed;
-      box-shadow: 0 0 5px #9ecaed;
+      @include mainShadow;
     }
   }
+
   .selected {
     border-color: #9ecaed;
     box-shadow: 0 0 15px #9ecaed;
 
   }
 }
+
 .filters {
   display: flex;
   justify-content: center;
@@ -78,19 +122,18 @@ h2 {
   margin-top: 1em;
   font-size: 1.2rem;
   width: 100%;
-
-
+  cursor: pointer;
   span {
     margin: 0.25em;
     border-radius: 10px;
     padding: 0.25em 0.75em;
-    border:2px solid #3700ff;
+    border: 2px solid #3700ff;
     transition-duration: 1s;
 
     &:hover {
       cursor: pointer;
       border-color: #9ecaed;
-      box-shadow: 0 0 5px #9ecaed;
+      @include mainShadow;
     }
   }
 
@@ -105,7 +148,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   width: 100%;
-
+  cursor: pointer;
 }
 
 .station {
@@ -163,7 +206,7 @@ audio {
   border-radius: 10px;
   height: 6rem;
   text-align: center;
-  color: gold;
+  color: white;
 }
 
 .rhap_stacked .rhap_controls-section {
@@ -173,15 +216,16 @@ audio {
 
 .rhap_controls-section .rhap_volume-controls {
   justify-content: right;
-  svg{color: gold;}
+
 }
+
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
   fill: rgb(255, 255, 255) !important;
 
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: gold !important;
+  fill: #9ecaed !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -190,9 +234,9 @@ audio {
   }
 
   img {
-    width: 7em;
-    height: 7em;
-    margin-bottom:3em;
+    width: 5em;
+    height: 5em;
+    margin-bottom: 3em;
   }
   .stationName {
     display: flex;
@@ -201,6 +245,7 @@ audio {
     width: 100%;
     align-items: center;
     justify-content: start;
+
     &:hover {
       border-color: #9ecaed;
     }

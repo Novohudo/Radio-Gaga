@@ -9,13 +9,14 @@ export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
 	const [stream, setStream] = useState('')
-	const [selectedCountry,setSelectedCountry] = useState(null)
+	const [selectedCountry, setSelectedCountry] = useState(null)
+	const [animationLogo, setAnimationLogo] = useState(false)
 
 	useEffect(() => {
-		SetupApi(stationFilter,selectedCountry).then(data => {
+		SetupApi(stationFilter, selectedCountry).then(data => {
 			setStations(data)
 		})
-	}, [stationFilter,selectedCountry])
+	}, [stationFilter, selectedCountry])
 
 	const setDefaultSrc = event => {
 		event.target.src = error
@@ -25,8 +26,10 @@ export default function Radio() {
 		<div className="radio">
 			<h1>GAGA Radio Player</h1>
 			<div className={"player-body"}>
-				<img className={"station-logo"} src={stream.favicon || error}/>
+				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
+					onPlay={()=>setAnimationLogo(true)}
+					onPause={()=>setAnimationLogo(false)}
 					header={stream.name}
 					className={"player"}
 					src={stream.urlResolved}
@@ -40,15 +43,16 @@ export default function Radio() {
 
 			<h3>Choose country</h3>
 			<div className={"countries"}>
-				{countries.map((country,index)=>(
+				{countries.map((country, index) => (
 					<span
 						className={selectedCountry === country ? "selected" : ""}
 						key={index}
-						onClick={()=>setSelectedCountry(country)}>
+						onClick={() => setSelectedCountry(country)}>
 						{country}
 					</span>
 				))}
 			</div>
+			<hr/>
 			<h3>Pick a genre</h3>
 			<div className="filters">
 				{filters.map((filter, index) => (
@@ -61,6 +65,7 @@ export default function Radio() {
         </span>
 				))}
 			</div>
+			<hr/>
 			<div className="stations">
 				{stations &&
 					stations.map((station, index) => {
