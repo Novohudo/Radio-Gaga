@@ -5,12 +5,14 @@ import error from "../img/radio.svg"
 import {countries, filters} from "../filters/filters";
 import {SetupApi} from "../API/API-radio";
 
-export default function Radio() {
+
+export default function Radio({animatedLogo}) {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
 	const [stream, setStream] = useState('')
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
+
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -23,7 +25,7 @@ export default function Radio() {
 	}
 
 	return (
-		<div className="radio">
+		<div  className={animationLogo === true ? "radioWithGradient" : "radio"} >
 			<h1>GAGA Radio Player</h1>
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
@@ -40,9 +42,8 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-
 			<h3>Choose country</h3>
-			<div className={"countries"}>
+			<div  className={"countries"}>
 				{countries.map((country, index) => (
 					<span
 						className={selectedCountry === country ? "selected" : ""}
@@ -88,7 +89,6 @@ export default function Radio() {
 						)
 					})}
 			</div>
-
 		</div>
 	)
 };
