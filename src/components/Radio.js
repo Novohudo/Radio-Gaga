@@ -25,8 +25,7 @@ export default function Radio({animatedLogo}) {
 	}
 
 	return (
-		<div  className={animationLogo === true ? "radioWithGradient" : "radio"} >
-			<h1>GAGA Radio Player</h1>
+		<div  className={"radio"} >
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer

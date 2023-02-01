@@ -80,13 +80,13 @@ h2 {
 .player-body {
   display: flex;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: rgb(0, 0, 0);
   position: sticky;
   top: 0px;
   height: 9em;
+  padding: 7px;
   @include border;
 }
-
 .static-logo {
   @include logoImage;
   box-shadow: none;
@@ -106,16 +106,14 @@ h2 {
     }
   }
 }
-
-
 .radio{
   max-width: 60em;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.82);
   --borderWidth: 0px;
   position: relative;
 }
-.radioWithGradient{
+.radio:after{
   @include colorGradient;
 }
 .countries {
@@ -143,7 +141,6 @@ h2 {
     box-shadow: 0 0 15px #9ecaed;
   }
 }
-
 .filters {
   display: flex;
   justify-content: center;
