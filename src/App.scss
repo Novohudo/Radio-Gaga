@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
-html{
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 @mixin colorGradient {
   content: '';
   position: absolute;
@@ -48,31 +38,54 @@ html{
 @mixin border{
   border-bottom: 3px solid #ffffff;
 }
-//=============================(0_^)==============================================
-html{
-  background-color: #000000;
-}
-hr{
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0);
-}
-.App {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 60em;
-  width: 100%;
-  margin: 0px auto;
+@media only screen and (max-width: 600px) {
+  .stations {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  img {
+    width: 5em;
+    height: 5em;
+    margin-bottom: 3em;
+  }
+  .stationName {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+
+    &:hover {
+      border-color: #9ecaed;
+    }
+  }
 }
 
+
+html{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #000000;
+}
 body {
   color: rgb(235, 235, 235);
   font-family: "Helvetica";
 }
-h2, h3 {
-  text-align: center;
+img {
+  display: block;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 15px #9ecaed;
+  margin: 0 0.25em;
 }
-
 h1 {
   text-align: right;
   padding-right: 12px;
@@ -81,12 +94,29 @@ h1 {
   background-color: black;
   margin:2px;
 }
-
+h2, h3 {
+  text-align: center;
+}
 h2 {
   margin-bottom: 1em;
   text-align: center;
 }
+hr{
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0);
+}
+audio {
+  width: 100%;
+}
 
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 60em;
+  width: 100%;
+  margin: 0px auto;
+}
 .player-body {
   display: flex;
   align-items: center;
@@ -179,14 +209,12 @@ h2 {
 
   }
 }
-
 .stations {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   width: 100%;
   cursor: pointer;
 }
-
 .station {
   font-size: 1.2em;
   margin: 0.25em;
@@ -197,7 +225,6 @@ h2 {
   justify-content: center;
   transition-duration: 1s;
 }
-
 .stationName {
   display: flex;
   flex-direction: row;
@@ -207,24 +234,9 @@ h2 {
   justify-content: start;
   font-style: italic;
 }
-
 .name {
   width: 100%;
   text-align: center;
-}
-
-img {
-  display: block;
-  width: 3.5em;
-  height: 3.5em;
-  border-radius: 50%;
-  border: none;
-  box-shadow: 0 0 15px #9ecaed;
-  margin: 0 0.25em;
-}
-
-audio {
-  width: 100%;
 }
 
 .rhap_container.player {
@@ -237,47 +249,19 @@ audio {
   height: 6rem;
   text-align: center;
   color: white;
-}
 
+}
 .rhap_stacked .rhap_controls-section {
   margin-top: 0 !important;
-
 }
-
 .rhap_controls-section .rhap_volume-controls {
   justify-content: right;
 
 }
-
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
   fill: rgb(255, 255, 255) !important;
 
 }
-
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
   fill: #9ecaed !important;
-}
-
-@media only screen and (max-width: 600px) {
-  .stations {
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  img {
-    width: 5em;
-    height: 5em;
-    margin-bottom: 3em;
-  }
-  .stationName {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    width: 100%;
-    align-items: center;
-    justify-content: start;
-
-    &:hover {
-      border-color: #9ecaed;
-    }
-  }
 }

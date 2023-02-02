@@ -25,12 +25,13 @@ export default function Radio({animatedLogo}) {
 	}
 
 	return (
-		<div  className={"radio"} >
+		<div className={"radio"}>
+
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
-					onPlay={()=>setAnimationLogo(true)}
-					onPause={()=>setAnimationLogo(false)}
+					onPlay={() => setAnimationLogo(true)}
+					onPause={() => setAnimationLogo(false)}
 					header={stream.name}
 					className={"player"}
 					src={stream.urlResolved}
@@ -42,7 +43,8 @@ export default function Radio({animatedLogo}) {
 				/>
 			</div>
 			<h3>Choose country</h3>
-			<div  className={"countries"}>
+
+			<div className={"countries"}>
 				{countries.map((country, index) => (
 					<span
 						className={selectedCountry === country ? "selected" : ""}
@@ -52,8 +54,10 @@ export default function Radio({animatedLogo}) {
 					</span>
 				))}
 			</div>
+
 			<hr/>
 			<h3>Pick a genre</h3>
+
 			<div className="filters">
 				{filters.map((filter, index) => (
 					<span
@@ -65,12 +69,12 @@ export default function Radio({animatedLogo}) {
         </span>
 				))}
 			</div>
+
 			<hr/>
 			<div className="stations">
 				{stations &&
 					stations.map((station, index) => {
 						return (
-
 							<div className="station" key={index} onClick={() => setStream(station)}>
 
 								<div className="stationName">
