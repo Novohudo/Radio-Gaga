@@ -35,9 +35,6 @@
 @mixin mainShadow{
   box-shadow: 0 0 5px #9ecaed;
 }
-@mixin border{
-  border-bottom: 3px solid #ffffff;
-}
 
 html{
   -webkit-tap-highlight-color: transparent;
@@ -78,8 +75,7 @@ h2 {
   text-align: center;
 }
 hr{
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.08);
 }
 audio {
   width: 100%;
@@ -101,7 +97,7 @@ audio {
   top: 0px;
   height: 9em;
   padding: 7px;
-  @include border;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.08);
 }
 .static-logo {
   @include logoImage;
