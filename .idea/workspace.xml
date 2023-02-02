@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="prevent the Blue highlighting of elements in Android">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="code optimizations(0.1)">
+      <change afterPath="$PROJECT_DIR$/src/components/elements/Countries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/elements/Filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/elements/Stations.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filters/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/filters/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/error.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/img/error.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/radio.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/img/radio.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +45,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\umrix\OneDrive\Рабочий стол\Radio-Gaga\radio\src\components\main elements" />
       <recent name="C:\Users\umrix\OneDrive\Рабочий стол\Radio-Gaga\radio\src\components" />
     </key>
   </component>
@@ -92,7 +99,7 @@
       <workItem from="1675185669765" duration="5262000" />
       <workItem from="1675275387545" duration="790000" />
       <workItem from="1675276195036" duration="242000" />
-      <workItem from="1675357679109" duration="2248000" />
+      <workItem from="1675357679109" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -199,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675358927257</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="code optimizations(0.1)">
+      <created>1675360332558</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1675360332558</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +246,7 @@
     <MESSAGE value="ui modification(0.4) background problem.." />
     <MESSAGE value="final version" />
     <MESSAGE value="prevent the Blue highlighting of elements in Android" />
-    <option name="LAST_COMMIT_MESSAGE" value="prevent the Blue highlighting of elements in Android" />
+    <MESSAGE value="code optimizations(0.1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="code optimizations(0.1)" />
   </component>
 </project>

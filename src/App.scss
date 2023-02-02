@@ -38,30 +38,6 @@
 @mixin border{
   border-bottom: 3px solid #ffffff;
 }
-@media only screen and (max-width: 600px) {
-  .stations {
-    grid-template-columns: repeat(2, 50%);
-  }
-
-  img {
-    width: 5em;
-    height: 5em;
-    margin-bottom: 3em;
-  }
-  .stationName {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    width: 100%;
-    align-items: center;
-    justify-content: start;
-
-    &:hover {
-      border-color: #9ecaed;
-    }
-  }
-}
-
 
 html{
   -webkit-tap-highlight-color: transparent;
@@ -264,4 +240,26 @@ audio {
 }
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
   fill: #9ecaed !important;
+}
+@media only screen and (max-width: 600px) {
+  .stations {
+    grid-template-columns: repeat(2, 50%);
+  }
+  img {
+    width: 5em;
+    height: 5em;
+    margin-bottom: 3em;
+  }
+  .stationName {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+
+    &:hover {
+      border-color: #9ecaed;
+    }
+  }
 }

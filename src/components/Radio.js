@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import H5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css"
-import error from "../img/radio.svg"
-import {countries, filters} from "../filters/filters";
+import error from "./img/radio.svg"
+import {countries, filters} from "./filters/filters";
 import {SetupApi} from "../API/API-radio";
+import Countries from "./elements/Countries";
+import Filters from "./elements/Filters";
+import Stations from "./elements/Stations";
 
-
-export default function Radio({animatedLogo}) {
+export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
 	const [stream, setStream] = useState('')
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -20,78 +21,40 @@ export default function Radio({animatedLogo}) {
 		})
 	}, [stationFilter, selectedCountry])
 
-	const setDefaultSrc = event => {
-		event.target.src = error
-	}
-
 	return (
 		<div className={"radio"}>
 
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
-					onPlay={() => setAnimationLogo(true)}
-					onPause={() => setAnimationLogo(false)}
 					header={stream.name}
 					className={"player"}
 					src={stream.urlResolved}
 					layout={"stacked-reverse"}
+					onPlay={() => setAnimationLogo(true)}
+					onPause={() => setAnimationLogo(false)}
 					showDownloadProgress={true}
 					showJumpControls={false}
 					customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
+
 			<h3>Choose country</h3>
-
-			<div className={"countries"}>
-				{countries.map((country, index) => (
-					<span
-						className={selectedCountry === country ? "selected" : ""}
-						key={index}
-						onClick={() => setSelectedCountry(country)}>
-						{country}
-					</span>
-				))}
-			</div>
-
+			<Countries
+				selectedCountry={selectedCountry}
+				setSelectedCountry={setSelectedCountry}/>
 			<hr/>
+
 			<h3>Pick a genre</h3>
-
-			<div className="filters">
-				{filters.map((filter, index) => (
-					<span
-						key={index}
-						className={stationFilter === filter ? "selected" : ""}
-						onClick={() => setStationFilter(filter)}
-					>
-          {filter}
-        </span>
-				))}
-			</div>
-
+			<Filters
+				stationFilter={stationFilter}
+				setStationFilter={setStationFilter}/>
 			<hr/>
-			<div className="stations">
-				{stations &&
-					stations.map((station, index) => {
-						return (
-							<div className="station" key={index} onClick={() => setStream(station)}>
 
-								<div className="stationName">
-
-									<img
-										className="logo"
-										src={station.favicon}
-										alt="station logo"
-										onError={setDefaultSrc}
-
-									/>
-									<div className="name">{station.name} btr:{station.bitrate}</div>
-								</div>
-							</div>
-						)
-					})}
-			</div>
+			<Stations
+				stations={stations}
+				setStream={setStream}/>
 		</div>
 	)
 };
