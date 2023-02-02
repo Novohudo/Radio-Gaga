@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="ui modification(0.4) background problem..">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="final version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +90,8 @@
       <workItem from="1674985490305" duration="14090000" />
       <workItem from="1675185669765" duration="5262000" />
       <workItem from="1675275387545" duration="790000" />
+      <workItem from="1675276195036" duration="242000" />
+      <workItem from="1675357679109" duration="668000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -183,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675190990839</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="final version">
+      <created>1675276402820</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675276402820</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +222,7 @@
     <MESSAGE value="ui modification(0.2) glow-border test" />
     <MESSAGE value="ui modification(0.3) colorfull background" />
     <MESSAGE value="ui modification(0.4) background problem.." />
-    <option name="LAST_COMMIT_MESSAGE" value="ui modification(0.4) background problem.." />
+    <MESSAGE value="final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="final version" />
   </component>
 </project>
