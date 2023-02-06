@@ -101,8 +101,6 @@ audio {
 }
 .static-logo {
   @include logoImage;
-  box-shadow: none;
-  transition-duration: 1s;
 }
 .animated-logo {
   @include logoImage;
