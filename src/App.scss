@@ -98,11 +98,18 @@ audio {
   height: 9em;
   padding: 7px;
   border-bottom: 5px solid rgba(255, 255, 255, 0.08);
+
 }
 .static-logo {
-  @include logoImage;
-  box-shadow: none;
-  transition-duration: 1s;
+  //@include logoImage;
+  display: block;
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #9ecaed;
+  margin: 0 0.25em;
+  filter: brightness(0%);
+  transition-duration: 2s;
 }
 .animated-logo {
   @include logoImage;
