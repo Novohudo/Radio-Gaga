@@ -24,7 +24,6 @@ export default function Radio() {
 
 	return (
 		<div className={"radio"}>
-
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
@@ -40,19 +39,25 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-			<Favorite/>
-			<h3>Choose country</h3>
-			<Countries
-				selectedCountry={selectedCountry}
-				setSelectedCountry={setSelectedCountry}/>
+			<details className={"custom-details"}>
+				<summary>Favorites</summary>
+				<Favorite/>
+			</details>
 			<hr/>
-
-			<h3>Pick a genre</h3>
-			<Filters
-				stationFilter={stationFilter}
-				setStationFilter={setStationFilter}/>
+			<details>
+				<summary>Choose country</summary>
+				<Countries
+					selectedCountry={selectedCountry}
+					setSelectedCountry={setSelectedCountry}/>
+			</details>
 			<hr/>
-
+			<details>
+				<summary>Pick a genre</summary>
+				<Filters
+					stationFilter={stationFilter}
+					setStationFilter={setStationFilter}/>
+			</details>
+			<hr/>
 			<Stations
 				stations={stations}
 				setStream={setStream}

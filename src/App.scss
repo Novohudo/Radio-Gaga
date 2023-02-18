@@ -36,6 +36,7 @@
   box-shadow: 0 0 5px #9ecaed;
 }
 
+//========================================================================
 html{
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -80,7 +81,22 @@ hr{
 audio {
   width: 100%;
 }
-
+details{
+  text-align: center;
+  font-family: "Candara";
+  font-size: 1.3em;
+}
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+.custom-details{
+  margin-top: 2em;
+}
+//=======================================================================
 .App {
   display: flex;
   align-items: center;
@@ -90,6 +106,7 @@ audio {
   margin: 0px auto;
 }
 .player-body {
+  border: 5px solid rgba(255, 255, 255, 0.13);
   display: flex;
   align-items: center;
   background-color: rgb(0, 0, 0);
@@ -97,7 +114,7 @@ audio {
   top: 0px;
   height: 9em;
   padding: 7px;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.08);
+  //border-bottom: 5px solid rgba(255, 255, 255, 0.08);
 }
 .static-logo {
   @include logoImage;
@@ -117,6 +134,8 @@ audio {
   }
 }
 .radio{
+  border: 3px solid rgba(63, 63, 63, 0.63);
+  min-height: 100em;
   max-width: 60em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.82);
@@ -129,12 +148,13 @@ audio {
 .favorite{
   display: grid;
   grid-template-columns: repeat(3, 33%);
+
   width: 100%;
   cursor: pointer;
   .favorite-item{
-    font-size: 0.9em;
     margin: 0.25em;
-    padding: 1em;
+
+    font-size: 0.9em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,6 +249,7 @@ audio {
   text-align: center;
 }
 
+//===============================================================================
 .rhap_container.player {
   background-color: rgba(0, 0, 0, 0);
   display: flex;
@@ -267,7 +288,21 @@ audio {
   .favorite{
     grid-template-columns: repeat(2, 50%);
   }
-  .stationName,.favorite-item{
+  .favorite-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1em;
+    img{
+      margin: 0;
+    }
+    .favorite-name{
+      margin: 0.6em;
+    }
+
+  }
+  .stationName{
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
