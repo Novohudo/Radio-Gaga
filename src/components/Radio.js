@@ -7,11 +7,12 @@ import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
+import Favorite from "../store/Favorite";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
-	const [stream, setStream] = useState('')
+	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
 
@@ -39,7 +40,7 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-
+			<Favorite/>
 			<h3>Choose country</h3>
 			<Countries
 				selectedCountry={selectedCountry}
@@ -54,7 +55,8 @@ export default function Radio() {
 
 			<Stations
 				stations={stations}
-				setStream={setStream}/>
+				setStream={setStream}
+				stream={stream}/>
 		</div>
 	)
 };

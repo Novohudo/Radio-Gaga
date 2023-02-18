@@ -126,6 +126,26 @@ audio {
 .radio:after{
   @include colorGradient;
 }
+.favorite{
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 100%;
+  cursor: pointer;
+  .favorite-item{
+    font-size: 0.9em;
+    margin: 0.25em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    .favorite-name{
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+}
 .countries {
   display: flex;
   justify-content: center;
@@ -236,7 +256,7 @@ audio {
   fill: #9ecaed !important;
 }
 @media only screen and (max-width: 600px) {
-  .stations {
+  .stations{
     grid-template-columns: repeat(2, 50%);
   }
   img {
@@ -244,16 +264,19 @@ audio {
     height: 5em;
     margin-bottom: 3em;
   }
-  .stationName {
+  .favorite{
+    grid-template-columns: repeat(2, 50%);
+  }
+  .stationName,.favorite-item{
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
     width: 100%;
     align-items: center;
     justify-content: start;
-
     &:hover {
       border-color: #9ecaed;
     }
+
   }
 }

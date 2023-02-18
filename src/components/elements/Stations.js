@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import error from "../img/radio.svg";
 
 const Stations = ({stations,setStream}) => {
+	let arr = JSON.parse(localStorage.getItem('result')) || [];
+
+	function saveToFavorite(station) {
+		arr.push(station)
+		localStorage.setItem('result',JSON.stringify(arr))
+			}
+
 	const setDefaultSrc = event => {
 		event.target.src = error
 	}
@@ -20,6 +27,7 @@ const Stations = ({stations,setStream}) => {
 									onError={setDefaultSrc}
 								/>
 								<div className="name">{station.name} btr:{station.bitrate}</div>
+								<button onClick={()=>saveToFavorite(station)}>save</button>
 							</div>
 						</div>
 					)
