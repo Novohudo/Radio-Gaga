@@ -15,12 +15,16 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-	
+
+	const [rerender,setRerender] = useState(false)
+
+
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
 			setStations(data)
 		})
-	}, [stationFilter, selectedCountry])
+		setRerender(false)
+	}, [stationFilter, selectedCountry,rerender])
 
 	return (
 		<div className={"radio"}>
@@ -61,6 +65,7 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
+				setRerender={setRerender}
 				stations={stations}
 				setStream={setStream}
 				stream={stream}

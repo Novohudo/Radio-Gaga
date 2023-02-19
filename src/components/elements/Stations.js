@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import error from "../img/radio.svg";
 
-const Stations = ({stations, setStream}) => {
-	let arr = JSON.parse(localStorage.getItem('result')) || [];
+const Stations = ({stations, setStream,setRerender}) => {
+const arr = JSON.parse(localStorage.getItem('result')) || [];
 
 	function saveToFavorite(station) {
 		arr.push(station)
 		localStorage.setItem('result', JSON.stringify(arr));
+		setRerender(true)
 	}
 
 	const setDefaultSrc = event => {
