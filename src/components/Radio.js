@@ -2,12 +2,11 @@ import React, {useEffect, useState} from 'react';
 import H5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css"
 import error from "./img/radio.svg"
-import {countries, filters} from "./filters/filters";
 import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
-import Favorite from "../store/Favorite";
+import Favorite from "../localStore/Favorite";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
@@ -15,7 +14,7 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-
+	
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
 			setStations(data)
@@ -41,7 +40,9 @@ export default function Radio() {
 			</div>
 			<details className={"custom-details"}>
 				<summary>Favorites</summary>
-				<Favorite/>
+				<Favorite
+					setStream={setStream}
+				/>
 			</details>
 			<hr/>
 			<details>
@@ -61,7 +62,8 @@ export default function Radio() {
 			<Stations
 				stations={stations}
 				setStream={setStream}
-				stream={stream}/>
+				stream={stream}
+				/>
 		</div>
 	)
 };

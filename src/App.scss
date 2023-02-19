@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
 @mixin colorGradient {
   content: '';
   position: absolute;
@@ -23,6 +24,7 @@
     }
   }
 }
+
 @mixin logoImage {
   display: block;
   width: 7em;
@@ -32,12 +34,13 @@
   box-shadow: 0 0 15px #9ecaed;
   margin: 0 0.25em;
 }
-@mixin mainShadow{
+
+@mixin mainShadow {
   box-shadow: 0 0 5px #9ecaed;
 }
 
 //========================================================================
-html{
+html {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -47,10 +50,12 @@ html{
   user-select: none;
   background-color: #000000;
 }
+
 body {
   color: rgb(235, 235, 235);
   font-family: "Helvetica";
 }
+
 img {
   display: block;
   width: 3.5em;
@@ -60,42 +65,58 @@ img {
   box-shadow: 0 0 15px #9ecaed;
   margin: 0 0.25em;
 }
+
 h1 {
   text-align: right;
   padding-right: 12px;
   font-size: 0.5rem;
   color: #6141ff;
   background-color: black;
-  margin:2px;
+  margin: 2px;
 }
+
 h2, h3 {
   text-align: center;
 }
+
 h2 {
   margin-bottom: 1em;
   text-align: center;
 }
-hr{
+
+hr {
   border-bottom: 5px solid rgba(255, 255, 255, 0.08);
 }
+
 audio {
   width: 100%;
 }
-details{
+
+details {
   text-align: center;
   font-family: "Candara";
   font-size: 1.3em;
 }
+
 details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
 }
+
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
+  0% {
+    opacity: 0;
+    margin-left: -10px
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px
+  }
 }
-.custom-details{
+
+.custom-details {
   margin-top: 2em;
 }
+
 //=======================================================================
 .App {
   display: flex;
@@ -105,6 +126,7 @@ details[open] summary ~ * {
   width: 100%;
   margin: 0px auto;
 }
+
 .player-body {
   border: 5px solid rgba(255, 255, 255, 0.13);
   display: flex;
@@ -114,11 +136,12 @@ details[open] summary ~ * {
   top: 0px;
   height: 9em;
   padding: 7px;
-  //border-bottom: 5px solid rgba(255, 255, 255, 0.08);
 }
+
 .static-logo {
   @include logoImage;
 }
+
 .animated-logo {
   @include logoImage;
   box-shadow: 0 0 10px #9ecaed;
@@ -133,7 +156,8 @@ details[open] summary ~ * {
     }
   }
 }
-.radio{
+
+.radio {
   border: 3px solid rgba(63, 63, 63, 0.63);
   min-height: 100em;
   max-width: 60em;
@@ -142,30 +166,42 @@ details[open] summary ~ * {
   --borderWidth: 0px;
   position: relative;
 }
-.radio:after{
+
+.radio:after {
   @include colorGradient;
 }
-.favorite{
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
 
+.favorite {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
   width: 100%;
   cursor: pointer;
-  .favorite-item{
+  // figure out !!  overflow: auto;
+  .favorite-Block {
     margin: 0.25em;
-
     font-size: 0.9em;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transition-duration: 1s;
-    .favorite-name{
+    .favorite-name {
       width: 100%;
       text-align: center;
-
+      margin-top: 1em;
+    }
+    .delete-button{
+      margin-left: 7em;
+      font-size: 20px;
+      font-weight: bolder;
+      color: rgba(255, 255, 255, 0.12);
+    }
+    .delete-button:hover{
+      color: red;
     }
   }
 }
+
 .countries {
   display: flex;
   justify-content: center;
@@ -175,22 +211,26 @@ details[open] summary ~ * {
   font-size: 1.2rem;
   width: 100%;
   cursor: pointer;
+
   span {
     margin: 0.25em;
     border-radius: 10px;
     padding: 0.25em 0.75em;
     border: none;
     transition-duration: 1s;
+
     &:hover {
       cursor: pointer;
       border-color: #9ecaed;
       @include mainShadow;
     }
   }
+
   .selected {
     box-shadow: 0 0 15px #9ecaed;
   }
 }
+
 .filters {
   display: flex;
   justify-content: center;
@@ -200,6 +240,7 @@ details[open] summary ~ * {
   font-size: 1.2rem;
   width: 100%;
   cursor: pointer;
+
   span {
     margin: 0.25em;
     border-radius: 10px;
@@ -219,12 +260,14 @@ details[open] summary ~ * {
 
   }
 }
+
 .stations {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   width: 100%;
   cursor: pointer;
 }
+
 .station {
   font-size: 1.2em;
   margin: 0.25em;
@@ -234,8 +277,12 @@ details[open] summary ~ * {
   align-items: center;
   justify-content: center;
   transition-duration: 1s;
+  .save-button{
+    padding-left: 1em;
+  }
 }
-.stationName {
+
+.stationBlock{
   display: flex;
   flex-direction: row;
   margin-bottom: 1em;
@@ -244,6 +291,7 @@ details[open] summary ~ * {
   justify-content: start;
   font-style: italic;
 }
+
 .name {
   width: 100%;
   text-align: center;
@@ -262,22 +310,27 @@ details[open] summary ~ * {
   color: white;
 
 }
+
 .rhap_stacked .rhap_controls-section {
   margin-top: 0 !important;
 }
+
 .rhap_controls-section .rhap_volume-controls {
   justify-content: right;
 
 }
+
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
   fill: rgb(255, 255, 255) !important;
 
 }
+
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
   fill: #9ecaed !important;
 }
+
 @media only screen and (max-width: 600px) {
-  .stations{
+  .stations {
     grid-template-columns: repeat(2, 50%);
   }
   img {
@@ -285,30 +338,33 @@ details[open] summary ~ * {
     height: 5em;
     margin-bottom: 3em;
   }
-  .favorite{
+  .favorite {
     grid-template-columns: repeat(2, 50%);
   }
-  .favorite-item{
+  .favorite-Block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     padding: 1em;
-    img{
+
+    img {
       margin: 0;
     }
-    .favorite-name{
+
+    .favorite-name {
       margin: 0.6em;
     }
 
   }
-  .stationName{
+  .stationBlock {
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
     width: 100%;
     align-items: center;
     justify-content: start;
+
     &:hover {
       border-color: #9ecaed;
     }
