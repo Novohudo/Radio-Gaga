@@ -1,19 +1,20 @@
 import React from 'react';
 import error from "../img/radio.svg";
+import favorite from "../../localStore/Favorite";
 
 const Favorite = ({setStream}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];
 	const setDefaultSrc = event => {
 		event.target.src = error
 	}
+
 	return (
 		<div className="favorite">
 			{arr &&
-				arr.map((station, index) => {
+				arr.map((station) => {
 					return (
-						<div key={index} onClick={() => setStream(station)}>
+						<div onClick={() => setStream(station)}>
 							<div className="favorite-Block">
-								<div className={"delete-button"}>X</div>
 								<img
 									className="logo"
 									src={station.favicon}
@@ -21,7 +22,6 @@ const Favorite = ({setStream}) => {
 									onError={setDefaultSrc}
 								/>
 								<div className="favorite-name">{station.name}</div>
-
 							</div>
 						</div>
 					)

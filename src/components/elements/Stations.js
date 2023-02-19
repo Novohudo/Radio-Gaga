@@ -1,13 +1,14 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import error from "../img/radio.svg";
 
-const Stations = ({stations, setStream,setRerender}) => {
+const Stations = ({stations, setStream,setRerender,setHideTrash}) => {
 const arr = JSON.parse(localStorage.getItem('result')) || [];
 
 	function saveToFavorite(station) {
 		arr.push(station)
 		localStorage.setItem('result', JSON.stringify(arr));
 		setRerender(true)
+		setHideTrash(false)
 	}
 
 	const setDefaultSrc = event => {
@@ -22,13 +23,12 @@ const arr = JSON.parse(localStorage.getItem('result')) || [];
 						<div className="station" key={index} onClick={() => setStream(station)}>
 							<div className="stationBlock">
 								<img
-									className="logo"
 									src={station.favicon}
 									alt="station logo"
 									onError={setDefaultSrc}
 								/>
-								<div className="name">{station.name} btr:{station.bitrate}</div>
-								<button onClick={() => saveToFavorite(station)}>save</button>
+								<div className="stationName">{station.name}</div>
+								<button className={'save-button'} onClick={() => saveToFavorite(station)}>save</button>
 							</div>
 						</div>
 					)
