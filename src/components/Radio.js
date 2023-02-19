@@ -6,7 +6,8 @@ import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
-import Favorite from "../localStore/Favorite";
+import Favorite from "./localStore/Favorite";
+
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
