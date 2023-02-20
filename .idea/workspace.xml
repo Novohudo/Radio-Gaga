@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="rerender with useState&#10;(solve problem with rerender after localStore is changes!!)">
-      <change afterPath="$PROJECT_DIR$/src/components/img/clear.svg" afterDir="false" />
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="bug-fixes/new styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/elements/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/img/error.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/localStore/Favorite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localStore/Favorite.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +101,9 @@
       <workItem from="1676480918763" duration="10087000" />
       <workItem from="1676723628662" duration="16708000" />
       <workItem from="1676792395428" duration="638000" />
-      <workItem from="1676818025418" duration="8414000" />
+      <workItem from="1676818025418" duration="8596000" />
+      <workItem from="1676913688047" duration="810000" />
+      <workItem from="1676914518977" duration="10105000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676817461376</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="bug-fixes/new styles">
+      <created>1676826716691</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676826716691</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +290,7 @@
     <MESSAGE value="localStore integration." />
     <MESSAGE value="(details tag) something new:))" />
     <MESSAGE value="rerender with useState&#10;(solve problem with rerender after localStore is changes!!)" />
-    <option name="LAST_COMMIT_MESSAGE" value="rerender with useState&#10;(solve problem with rerender after localStore is changes!!)" />
+    <MESSAGE value="bug-fixes/new styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug-fixes/new styles" />
   </component>
 </project>

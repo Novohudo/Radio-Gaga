@@ -16,7 +16,7 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-	const [hideTrash, setHideTrash] = useState(true);
+	const [hideTrash, setHideTrash] = useState(false);
 	const [rerender, setRerender] = useState(false)
 
 	useEffect(() => {
@@ -29,7 +29,6 @@ export default function Radio() {
 	function deleteFavorite() {
 		localStorage.clear();
 		setRerender(true);
-		setHideTrash(true);
 	}
 
 	return (
@@ -49,23 +48,24 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-			<details className={"custom-details"}>
+			<details open className={"custom-details"}>
 				<summary>Favorites</summary>
 				<button className={hideTrash === true ? 'hide-delete-button' : 'delete-button'} onClick={deleteFavorite}><img
 					className={'clearImg'} src={clear}/></button>
 				<Favorite
+					setHideTrash={setHideTrash}
 					setStream={setStream}
 				/>
 			</details>
 			<hr/>
-			<details>
+			<details open>
 				<summary>Choose country</summary>
 				<Countries
 					selectedCountry={selectedCountry}
 					setSelectedCountry={setSelectedCountry}/>
 			</details>
 			<hr/>
-			<details>
+			<details open>
 				<summary>Pick a genre</summary>
 				<Filters
 					stationFilter={stationFilter}

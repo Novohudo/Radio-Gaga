@@ -49,6 +49,7 @@ html {
   -ms-user-select: none;
   user-select: none;
   background-color: #000000;
+  border: 2px solid rgba(63, 63, 63, 0.63);
 }
 
 body {
@@ -131,14 +132,16 @@ details[open] summary ~ * {
 }
 
 .player-body {
-  border: 5px solid rgba(255, 255, 255, 0.13);
+  border-bottom:8px solid rgba(255, 255, 255, 0.13);
   display: flex;
   align-items: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.49);
+  backdrop-filter: blur(15px);
   position: sticky;
   top: 0px;
   height: 9em;
   padding: 7px;
+  z-index: 1;
 }
 
 .static-logo {
@@ -173,26 +176,30 @@ details[open] summary ~ * {
 .radio:after {
   @include colorGradient;
 }
-.delete-button{
+
+.delete-button {
   border: none;
-  background:none;
+  background: none;
   color: rgba(248, 248, 248, 0.62);
   font-family: Arial;
   font-size: 20px;
   cursor: pointer;
-  img{
+
+  img {
     display: block;
-    width:2em;
+    width: 2em;
     height: 2em;
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 10px #ff0000;
-    margin:0.5em 45em 0 0;
+    margin: 0.5em 0 0 0;
   }
 }
-.hide-delete-button{
+
+.hide-delete-button {
   display: none;
 }
+
 .favorite {
   display: grid;
   grid-template-columns: repeat(5, 20%);
@@ -207,6 +214,7 @@ details[open] summary ~ * {
     align-items: center;
     justify-content: center;
     transition-duration: 1s;
+
     .favorite-name {
       width: 100%;
       text-align: center;
@@ -290,15 +298,38 @@ details[open] summary ~ * {
   align-items: center;
   justify-content: center;
   transition-duration: 1s;
-  .save-button{
+
+  .save-button {
     border: none;
     background: none;
     font-size: 20px;
     margin-top: auto;
+    width: 1em;
+    height: 1em;
+    img {
+      height: 1.5em;
+      width: 1.5em;
+      box-shadow: 0 0 5px #ffffff;
+    }
+  }
+  .toast-message{
+    font-family:Arial;
+    font-style: normal;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(5px);
+    color: rgb(215, 215, 215);
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    width: 30vw;
+    margin-left: -4em;
+    svg{
+      display: none;
+    }
   }
 }
 
-.stationBlock{
+.stationBlock {
   display: flex;
   flex-direction: row;
   margin-bottom: 1em;
@@ -347,6 +378,7 @@ details[open] summary ~ * {
 }
 
 @media only screen and (max-width: 600px) {
+
   .stations {
     grid-template-columns: repeat(2, 50%);
   }
@@ -367,6 +399,8 @@ details[open] summary ~ * {
     padding: 1em;
 
     img {
+      //height: 4em;
+      //width:4em;
       margin: 0;
     }
 
@@ -389,8 +423,12 @@ details[open] summary ~ * {
     }
 
   }
-  .delete-button{
-    margin:0.5em -45em 0 0;
+  .delete-button {
+    margin: 0;
     font-size: 15px;
+  }
+  .toast-message{
+    width: 100% !important;
+    margin-left:0.1vw !important;
   }
 }

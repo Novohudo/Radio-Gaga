@@ -1,9 +1,11 @@
 import React from 'react';
 import error from "../img/radio.svg";
-import favorite from "../../localStore/Favorite";
 
-const Favorite = ({setStream}) => {
+
+const Favorite = ({setStream,setHideTrash}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];
+	if(!arr.length){setHideTrash(true)}
+
 	const setDefaultSrc = event => {
 		event.target.src = error
 	}
