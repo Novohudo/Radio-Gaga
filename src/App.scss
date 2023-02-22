@@ -36,7 +36,7 @@
 }
 
 @mixin mainShadow {
-  box-shadow: 0 0 5px #9ecaed;
+  box-shadow: 0 0 5px rgba(9, 241, 221, 0.13);
 }
 
 //========================================================================
@@ -49,12 +49,13 @@ html {
   -ms-user-select: none;
   user-select: none;
   background-color: #000000;
-  border: 2px solid rgba(63, 63, 63, 0.63);
+  border: 2px solid rgba(9, 241, 221, 0.13);
 }
 
 body {
-  color: rgb(235, 235, 235);
+  color: rgb(255, 255, 255);
   font-family: "Helvetica";
+  text-shadow: 4px 4px 10px rgba(9, 241, 221, 1);
 }
 
 img {
@@ -63,17 +64,8 @@ img {
   height: 3.5em;
   border-radius: 50%;
   border: none;
-  box-shadow: 0 0 15px #9ecaed;
+  box-shadow: 0 0 10px rgba(9, 241, 221, 1);
   margin: 0 0.25em;
-}
-
-h1 {
-  text-align: right;
-  padding-right: 12px;
-  font-size: 0.5rem;
-  color: #6141ff;
-  background-color: black;
-  margin: 2px;
 }
 
 h2, h3 {
@@ -86,7 +78,7 @@ h2 {
 }
 
 hr {
-  border-bottom: 5px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 5px solid rgba(9, 241, 221, 0.07);
 }
 
 audio {
@@ -132,7 +124,7 @@ details[open] summary ~ * {
 }
 
 .player-body {
-  border-bottom:8px solid rgba(255, 255, 255, 0.13);
+  border-bottom: 8px solid rgba(9, 241, 221, 0.13);
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.49);
@@ -150,7 +142,7 @@ details[open] summary ~ * {
 
 .animated-logo {
   @include logoImage;
-  box-shadow: 0 0 10px #9ecaed;
+  box-shadow: 0 0 11px rgba(9, 241, 221, 1);
   transition-duration: 1s;
   animation: rotation 7.5s infinite linear;
   @keyframes rotation {
@@ -164,7 +156,7 @@ details[open] summary ~ * {
 }
 
 .radio {
-  border: 3px solid rgba(63, 63, 63, 0.63);
+  border: 3px solid rgba(9, 241, 221, 0.13);
   min-height: 100em;
   max-width: 60em;
   width: 100%;
@@ -180,11 +172,9 @@ details[open] summary ~ * {
 .delete-button {
   border: none;
   background: none;
-  color: rgba(248, 248, 248, 0.62);
   font-family: Arial;
   font-size: 20px;
   cursor: pointer;
-
   img {
     display: block;
     width: 2em;
@@ -192,7 +182,7 @@ details[open] summary ~ * {
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 10px #ff0000;
-    margin: 0.5em 0 0 0;
+    margin: 1em 0 0 0;
   }
 }
 
@@ -205,6 +195,8 @@ details[open] summary ~ * {
   grid-template-columns: repeat(5, 20%);
   width: 100%;
   cursor: pointer;
+  max-height: 300px;
+  overflow: auto;
   // figure out !!  overflow: auto;
   .favorite-Block {
     margin: 0.25em;
@@ -242,13 +234,13 @@ details[open] summary ~ * {
 
     &:hover {
       cursor: pointer;
-      border-color: #9ecaed;
+      border-color: rgba(9, 241, 221, 1);
       @include mainShadow;
     }
   }
 
   .selected {
-    box-shadow: 0 0 15px #9ecaed;
+    box-shadow: 0 0 15px rgba(9, 241, 221, 1);
   }
 }
 
@@ -270,14 +262,14 @@ details[open] summary ~ * {
 
     &:hover {
       cursor: pointer;
-      border-color: #9ecaed;
+      border-color: rgba(9, 241, 221, 1);
       @include mainShadow;
     }
   }
 
   .selected {
-    border-color: #9ecaed;
-    box-shadow: 0 0 15px #9ecaed;
+    border-color: rgba(9, 241, 221, 1);
+    box-shadow: 0 0 15px rgba(9, 241, 221, 1);
 
   }
 }
@@ -303,27 +295,21 @@ details[open] summary ~ * {
     border: none;
     background: none;
     font-size: 20px;
-    margin-top: auto;
-    width: 1em;
-    height: 1em;
-    img {
-      height: 1.5em;
-      width: 1.5em;
-      box-shadow: 0 0 5px #ffffff;
-    }
+    height: 1.5em;
+    width: 1.5em;
+    box-shadow: 0 0 10px rgb(9, 241, 221);
   }
-  .toast-message{
-    font-family:Arial;
+
+  .toast-message {
+    font-family: "Calibri";
+    font-size: 15px;
     font-style: normal;
-    background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(5px);
-    color: rgb(215, 215, 215);
-    font-size: 17px;
     font-weight: normal;
     text-align: center;
-    width: 30vw;
-    margin-left: -4em;
-    svg{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-shadow: none;
+    svg {
       display: none;
     }
   }
@@ -343,6 +329,7 @@ details[open] summary ~ * {
   width: 100%;
   text-align: center;
   margin-bottom: 1em;
+  text-shadow: 4px 4px 8px rgba(9, 241, 221, 1);
 }
 
 //===============================================================================
@@ -356,16 +343,51 @@ details[open] summary ~ * {
   height: 6rem;
   text-align: center;
   color: white;
+}
 
+.rhap_progress-indicator {
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.rhap_progress-bar {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.rhap_progress-filled {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+.rhap_download-progress {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.rhap_time {
+  font-size: 12px !important;
+  color: white !important;
+}
+
+.rhap_volume-bar {
+  background-color: rgb(255, 0, 0) !important;
+}
+.rhap_volume-indicator{
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.rhap_volume-button {
+  svg {
+    color: rgb(255, 255, 255) !important;
+  }
 }
 
 .rhap_stacked .rhap_controls-section {
   margin-top: 0 !important;
+
 }
 
 .rhap_controls-section .rhap_volume-controls {
   justify-content: right;
-
+  color: #fffefe;
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
@@ -374,7 +396,8 @@ details[open] summary ~ * {
 }
 
 .rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: #9ecaed !important;
+  fill: rgb(255, 255, 255) !important;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -389,7 +412,15 @@ details[open] summary ~ * {
 
   }
   .favorite {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(3, 33.3%);
+    font-size: 17px;
+    border-top: 4px  solid rgba(9, 241, 221, 0.1);
+    margin-top: 8px;
+    background-color: rgba(0, 0, 0, 0.42);
+    img{
+      width: 3em;
+      height:3em;
+    }
   }
   .favorite-Block {
     display: flex;
@@ -399,8 +430,6 @@ details[open] summary ~ * {
     padding: 1em;
 
     img {
-      //height: 4em;
-      //width:4em;
       margin: 0;
     }
 
@@ -416,19 +445,21 @@ details[open] summary ~ * {
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: start;
 
-    &:hover {
-      border-color: #9ecaed;
+    .save-button {
+
     }
-
+  }
+  .save-button {
+    margin: 0;
+    margin: 0 0 0 5em;
   }
   .delete-button {
     margin: 0;
     font-size: 15px;
   }
-  .toast-message{
-    width: 100% !important;
-    margin-left:0.1vw !important;
+  .toast-message {
+    //width: 100% !important;
+    //margin-left:0.1vw !important;
   }
 }

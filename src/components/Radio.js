@@ -8,6 +8,7 @@ import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
 import Favorite from "./localStore/Favorite";
+import {toast} from "react-toastify";
 
 
 export default function Radio() {
@@ -30,6 +31,14 @@ export default function Radio() {
 		localStorage.clear();
 		setRerender(true);
 	}
+	const showToastMessage = () => {
+		toast.success('saved to favorite', {
+			position: toast.POSITION.BOTTOM_CENTER,
+			className: 'toast-message',
+			autoClose:500,
+			hideProgressBar: true,
+		});
+	};
 
 	return (
 		<div className={"radio"}>
@@ -73,6 +82,7 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
+				showToastMessage={showToastMessage}
 				setRerender={setRerender}
 				setHideTrash={setHideTrash}
 				stations={stations}
