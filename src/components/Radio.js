@@ -1,15 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import H5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css"
-import error from "./img/radio.svg"
-import clear from "./img/clear.svg";
+import error from "./img/radio.svg";
 import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
 import Favorite from "./localStore/Favorite";
-import {toast} from "react-toastify";
-
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
@@ -17,31 +14,19 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-	const [hideTrash, setHideTrash] = useState(false);
-	const [rerender, setRerender] = useState(false)
+
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
 			setStations(data)
 		})
-		setRerender(false)
-	}, [stationFilter, selectedCountry, rerender])
+	}, [stationFilter, selectedCountry])
 
-	function deleteFavorite() {
-		localStorage.clear();
-		setRerender(true);
-	}
-	const showToastMessage = () => {
-		toast.success('saved to favorite', {
-			position: toast.POSITION.BOTTOM_CENTER,
-			className: 'toast-message',
-			autoClose:500,
-			hideProgressBar: true,
-		});
-	};
 
 	return (
 		<div className={"radio"}>
+			<h6>GaGa Radio Player</h6>
+			<hr/>
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
@@ -57,12 +42,9 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-			<details open className={"custom-details"}>
+			<details open>
 				<summary>Favorites</summary>
-				<button className={hideTrash === true ? 'hide-delete-button' : 'delete-button'} onClick={deleteFavorite}><img
-					className={'clearImg'} src={clear}/></button>
 				<Favorite
-					setHideTrash={setHideTrash}
 					setStream={setStream}
 				/>
 			</details>
@@ -82,9 +64,6 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
-				showToastMessage={showToastMessage}
-				setRerender={setRerender}
-				setHideTrash={setHideTrash}
 				stations={stations}
 				setStream={setStream}
 				stream={stream}

@@ -1,10 +1,15 @@
 import React from 'react';
 import error from "../img/radio.svg";
+import clear from "../img/clear.svg";
 
-
-const Favorite = ({setStream,setHideTrash}) => {
+const Favorite = ({setStream}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];
-	if(!arr.length){setHideTrash(true)}
+
+	const handleDelete = (id) => {
+		const newArr = arr.filter((station) => station.id !== id);
+		localStorage.setItem('result', JSON.stringify(newArr));
+	}
+
 
 	const setDefaultSrc = event => {
 		event.target.src = error
@@ -16,15 +21,17 @@ const Favorite = ({setStream,setHideTrash}) => {
 				arr.map((station) => {
 					return (
 						<div onClick={() => setStream(station)}>
+							<br/>
 							<div className="favorite-Block">
 								<img
-									className="logo"
 									src={station.favicon}
 									alt="station logo"
 									onError={setDefaultSrc}
 								/>
+								<button onClick={() => handleDelete(station.id)} className={"delete-button"}><img src={clear}/></button>
 								<div className="favorite-name">{station.name}</div>
 							</div>
+							<br/>
 						</div>
 					)
 				})}

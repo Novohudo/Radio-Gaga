@@ -1,20 +1,25 @@
 import React from 'react';
 import error from "../img/radio.svg";
 import like from "../img/like.svg";
-import {cssTransition, toast, ToastContainer} from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Stations = ({stations, setStream,setRerender,setHideTrash,showToastMessage}) => {
+const Stations = ({stations, setStream}) => {
 const arr = JSON.parse(localStorage.getItem('result')) || [];
 
 	function saveToFavorite(station) {
 		arr.push(station)
 		localStorage.setItem('result', JSON.stringify(arr));
-		setRerender(true);
-		setHideTrash(false);
 		showToastMessage();
 	}
-
+	const showToastMessage = () => {
+		toast.success('saved to favorite', {
+			position: toast.POSITION.BOTTOM_CENTER,
+			className: 'toast-message',
+			autoClose:500,
+			hideProgressBar: true,
+		});
+	};
 
 	const setDefaultSrc = event => {
 		event.target.src = error
@@ -26,14 +31,13 @@ const arr = JSON.parse(localStorage.getItem('result')) || [];
 				stations.map((station, index) => {
 					return (
 						<div className="station" key={index} onClick={() => setStream(station)}>
-
 							<div className="stationBlock">
-								<img src={like} className={'save-button'} onClick={() => saveToFavorite(station)}/>
 								<img
 									src={station.favicon}
 									alt="station logo"
 									onError={setDefaultSrc}
 								/>
+								<button className={'save-button'} onClick={() => saveToFavorite(station)}><img src={like}/></button>
 								<div className="stationName">{station.name}</div>
 								<ToastContainer/>
 							</div>
