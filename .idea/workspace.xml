@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="common changes in theme(borders,colors,items)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/localStore/Favorite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localStore/Favorite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/localStore/Favorite.js" beforeDir="false" />
-    </list>
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="common changes in theme(borders,colors,items)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -30,9 +30,11 @@ const Favorite = ({setStream}) => {
 								/>
 								<button onClick={() => handleDelete(station.id)} className={"delete-button"}><img src={clear}/></button>
 								<div className="favorite-name">{station.name}</div>
+								<p>'idiot - for commit'</p>
 							</div>
 							<br/>
 						</div>
+
 					)
 				})}
 		</div>
