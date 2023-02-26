@@ -6,7 +6,7 @@ import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
-import Favorite from "./localStore/Favorite";
+import Favorites from "./localStore/Favorites";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
@@ -14,7 +14,7 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-
+	const [rerender,setRerender] = useState(false)
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -22,6 +22,9 @@ export default function Radio() {
 		})
 	}, [stationFilter, selectedCountry])
 
+	useEffect(()=>{
+		setRerender(false)
+	},[rerender])
 
 	return (
 		<div className={"radio"}>
@@ -44,7 +47,8 @@ export default function Radio() {
 			</div>
 			<details open>
 				<summary>Favorites</summary>
-				<Favorite
+				<Favorites
+					setRerender={setRerender}
 					setStream={setStream}
 				/>
 			</details>
@@ -64,6 +68,7 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
+				setRerender={setRerender}
 				stations={stations}
 				setStream={setStream}
 				stream={stream}
