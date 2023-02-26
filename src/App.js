@@ -6,7 +6,7 @@ import Radio from "./components/Radio";
 function App() {
 	return (
 		<div className={"App"}>
-			<Radio/>
+		<Radio/>
 		</div>
 	);
 }

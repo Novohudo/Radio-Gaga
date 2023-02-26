@@ -1,6 +1,6 @@
 import React from 'react';
-import error from "../img/radio.svg";
-import clear from "../img/clear.svg";
+import error from "../../img/radio.svg";
+import clear from "../../img/clear.svg";
 
 const Favorites = ({setStream, setRerender,isActive,setIsActive}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import error from "../img/radio.svg";
-import like from "../img/like.svg";
+import error from "../../img/radio.svg";
+import like from "../../img/like.svg";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import H5AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css"
-import error from "./img/radio.svg";
+import error from "../img/radio.svg";
 import {SetupApi} from "../API/API-radio";
 import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
@@ -27,9 +27,6 @@ export default function Radio() {
 		setRerender(false)
 	},[rerender])
 
-	function activeRefresh(){
-		setIsActive(null)
-	}
 
 	return (
 		<div className={"radio"} >
