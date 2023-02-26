@@ -16,6 +16,7 @@ export default function Radio() {
 	const [animationLogo, setAnimationLogo] = useState(false)
 	const [rerender,setRerender] = useState(false)
 	const [isActive,setIsActive] = useState(null)
+	const [showNotification,setShowNotification] = useState(false);
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -46,10 +47,17 @@ export default function Radio() {
 					customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
 					autoPlayAfterSrcChange={true}
 				/>
+
 			</div>
+					{showNotification && (
+						<div className={'notificationBox'}>
+							<p className="notification">added to favorite</p>
+						</div>
+					)}
 			<details open>
 				<summary>Favorites</summary>
 				<Favorites
+					setShowNotification={setShowNotification}
 					isActive={isActive}
 					setIsActive={setIsActive}
 					setRerender={setRerender}
@@ -72,6 +80,7 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
+				setShowNotification={setShowNotification}
 				isActive={isActive}
 				setIsActive={setIsActive}
 				setRerender={setRerender}

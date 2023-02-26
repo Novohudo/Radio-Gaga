@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="toggle style  on click between (Stations-Favorites)">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="theme change(dark neon)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/elements/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/img/clear.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/clear.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/img/like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/like.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/img/radio.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/radio.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/localStore/Favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localStore/Favorites.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +109,7 @@
       <workItem from="1676913688047" duration="810000" />
       <workItem from="1676914518977" duration="10105000" />
       <workItem from="1676998416237" duration="14258000" />
-      <workItem from="1677400605902" duration="17565000" />
+      <workItem from="1677400605902" duration="23462000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -280,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677411734701</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="theme change(dark neon)">
+      <created>1677418865184</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677418865184</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +328,7 @@
     <MESSAGE value="common changes in theme(borders,colors,items)" />
     <MESSAGE value="different ways to change style on click(Stations,Favorites)" />
     <MESSAGE value="toggle style  on click between (Stations-Favorites)" />
-    <option name="LAST_COMMIT_MESSAGE" value="toggle style  on click between (Stations-Favorites)" />
+    <MESSAGE value="theme change(dark neon)" />
+    <option name="LAST_COMMIT_MESSAGE" value="theme change(dark neon)" />
   </component>
 </project>
