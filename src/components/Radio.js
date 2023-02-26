@@ -15,6 +15,7 @@ export default function Radio() {
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
 	const [rerender,setRerender] = useState(false)
+	const [isActive,setIsActive] = useState(null)
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -26,8 +27,12 @@ export default function Radio() {
 		setRerender(false)
 	},[rerender])
 
+	function activeRefresh(){
+		setIsActive(null)
+	}
+
 	return (
-		<div className={"radio"}>
+		<div className={"radio"} >
 			<h6>GaGa Radio Player</h6>
 			<hr/>
 			<div className={"player-body"}>
@@ -48,6 +53,8 @@ export default function Radio() {
 			<details open>
 				<summary>Favorites</summary>
 				<Favorites
+					isActive={isActive}
+					setIsActive={setIsActive}
 					setRerender={setRerender}
 					setStream={setStream}
 				/>
@@ -68,6 +75,8 @@ export default function Radio() {
 			</details>
 			<hr/>
 			<Stations
+				isActive={isActive}
+				setIsActive={setIsActive}
 				setRerender={setRerender}
 				stations={stations}
 				setStream={setStream}

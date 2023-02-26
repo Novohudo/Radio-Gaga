@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import error from "../img/radio.svg";
 import clear from "../img/clear.svg";
 
-const Favorites = ({setStream, setRerender}) => {
-	const [active, setActive] = useState(null)
-
+const Favorites = ({setStream, setRerender,isActive,setIsActive}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];
 
 	const handleDelete = (id) => {
@@ -15,7 +13,7 @@ const Favorites = ({setStream, setRerender}) => {
 
 	function activeFavoriteItem(station) {
 		setStream(station);
-		setActive(station);
+		setIsActive(station);
 		const activeEl = document.querySelector('.favoriteBlock.active');
 		if (activeEl) {
 			activeEl.classList.toggle('active');
@@ -30,7 +28,7 @@ const Favorites = ({setStream, setRerender}) => {
 				arr.map((station) => {
 					return (
 						<div className="favorite">
-							<div className={`favoriteBlock ${active === station ? "active" : ""}`} data-id={station.id}>
+							<div className={`favoriteBlock ${isActive === station ? "active" : ""}`} data-id={station.id}>
 								<img
 									onClick={() => activeFavoriteItem(station)}
 									src={station.favicon || error}

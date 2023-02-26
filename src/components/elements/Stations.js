@@ -4,8 +4,7 @@ import like from "../img/like.svg";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Stations = ({stations, setStream, setRerender}) => {
-	const [activeStation, setActiveStation] = useState(null);
+const Stations = ({stations, setStream, setRerender,isActive,setIsActive}) => {
 
 	const arr = JSON.parse(localStorage.getItem('result')) || [];
 
@@ -27,9 +26,13 @@ const Stations = ({stations, setStream, setRerender}) => {
 
 	function activeStationItem(station) {
 		setStream(station);
-		setActiveStation(station);
-		console.log(activeStation)
+		setIsActive(station);
+		const previousActiveEl = document.querySelector('.favoriteBlock.active');
+		if (previousActiveEl) {
+			previousActiveEl.classList.remove('active');
+		}
 	}
+
 
 	return (
 		<div className="stations">
@@ -37,7 +40,7 @@ const Stations = ({stations, setStream, setRerender}) => {
 				stations.map((station) => {
 					return (
 						<div className={'station'}>
-							<div className={`stationBlock ${activeStation === station ? "playedStation" : ""}`}>
+							<div className={`stationBlock ${isActive === station ? "playedStation" : ""}`}>
 								<img
 									onClick={() => activeStationItem(station)}
 									src={station.favicon || error}
