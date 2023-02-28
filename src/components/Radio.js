@@ -17,6 +17,7 @@ export default function Radio() {
 	const [rerender,setRerender] = useState(false)
 	const [isActive,setIsActive] = useState(null)
 	const [showNotification,setShowNotification] = useState(false);
+	const [showStationsList,setShowStationsList] = useState(false);
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -67,6 +68,7 @@ export default function Radio() {
 			<details open>
 				<summary>Choose country</summary>
 				<Countries
+					setShowStationsList={setShowStationsList}
 					selectedCountry={selectedCountry}
 					setSelectedCountry={setSelectedCountry}/>
 			</details>
@@ -78,6 +80,9 @@ export default function Radio() {
 					setStationFilter={setStationFilter}/>
 			</details>
 			<hr/>
+			{showStationsList && (
+				<p>Choose stations</p>
+			)}
 			<Stations
 				setShowNotification={setShowNotification}
 				isActive={isActive}

@@ -86,7 +86,11 @@ body {
   color: rgb(255, 255, 255);
   text-shadow: 4px 4px 10px rgba(9, 241, 221, 1);
 }
-
+p{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
 img {
   display: block;
   width: 3.5em;
@@ -175,6 +179,7 @@ details[open] summary ~ * {
     top: 0;
     height: 9em;
     padding: 7px;
+    z-index: 1;
 
     .static-logo {
       @include logoImage;
