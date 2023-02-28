@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Radio-Gaga/static/css/main.24e33553.css",
-    "main.js": "/Radio-Gaga/static/js/main.cba3ab13.js",
+    "main.css": "/Radio-Gaga/static/css/main.ae0a6fb0.css",
+    "main.js": "/Radio-Gaga/static/js/main.a4d80b78.js",
     "static/media/radio.svg": "/Radio-Gaga/static/media/radio.f0a569c5d26a46b2a39794e3d570f6f9.svg",
     "static/media/like.svg": "/Radio-Gaga/static/media/like.a4463972a8c45c00302efca59d7ed3d8.svg",
     "index.html": "/Radio-Gaga/index.html",
     "static/media/clear.svg": "/Radio-Gaga/static/media/clear.786a54d12604b07908370a8ab94eff3b.svg",
-    "main.24e33553.css.map": "/Radio-Gaga/static/css/main.24e33553.css.map",
-    "main.cba3ab13.js.map": "/Radio-Gaga/static/js/main.cba3ab13.js.map"
+    "main.ae0a6fb0.css.map": "/Radio-Gaga/static/css/main.ae0a6fb0.css.map",
+    "main.a4d80b78.js.map": "/Radio-Gaga/static/js/main.a4d80b78.js.map"
   },
   "entrypoints": [
-    "static/css/main.24e33553.css",
-    "static/js/main.cba3ab13.js"
+    "static/css/main.ae0a6fb0.css",
+    "static/js/main.a4d80b78.js"
   ]
 }
