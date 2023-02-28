@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="font-style and couple fixes(duplicated code)&#10;i dont know is it normal commit so much??">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="update 0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/Countries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Countries.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,7 @@
       <workItem from="1677400605902" duration="23788000" />
       <workItem from="1677437158327" duration="64000" />
       <workItem from="1677519295498" duration="608000" />
-      <workItem from="1677591336816" duration="4005000" />
+      <workItem from="1677591336816" duration="7860000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -305,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677594736275</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update 0.1">
+      <created>1677595609627</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1677595609627</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +332,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Radio.js component" />
     <MESSAGE value="http.fix" />
     <MESSAGE value="setBaseUrl(fix)" />
     <MESSAGE value="structure change" />
@@ -349,6 +356,7 @@
     <MESSAGE value="notification element(add to favorite)" />
     <MESSAGE value="animation fix(to-many trash)" />
     <MESSAGE value="font-style and couple fixes(duplicated code)&#10;i dont know is it normal commit so much??" />
-    <option name="LAST_COMMIT_MESSAGE" value="font-style and couple fixes(duplicated code)&#10;i dont know is it normal commit so much??" />
+    <MESSAGE value="update 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 0.1" />
   </component>
 </project>

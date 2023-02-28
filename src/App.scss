@@ -122,40 +122,23 @@ hr {
   color: rgba(9, 241, 221, 0.29);;
   margin: 0;
 }
+.customHr{
+  border-bottom: 3px double rgba(9, 241, 221, 0.29);
+  width: 100%;
+}
 
 audio {
   width: 100%;
 }
 
-
 details {
+  margin: 15px 0 15px 0;
+  letter-spacing: 1px;
   text-align: center;
   font-size: 1.3em;
   cursor: pointer;
 }
 
-details {
-  margin: 15px 0 15px 0;
-  letter-spacing: 1px;
-}
-summary{
-
-}
-details[open] summary ~ * {
-  animation: sweep .2s ease-in-out;
-
-}
-
-@keyframes sweep {
-  0% {
-    opacity: 0;
-    margin-left: -10px
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0
-  }
-}
 
 .App {
   display: flex;
@@ -238,7 +221,6 @@ details[open] summary ~ * {
   max-width: 100%;
   cursor: pointer;
   overflow: auto;
-  //background-color: rgba(0, 0, 0, 0.42);
   border-top: 4px double rgba(9, 241, 221, 0.1);
   border-bottom: 4px double rgba(9, 241, 221, 0.1);
   padding: 1em;
@@ -342,7 +324,6 @@ details[open] summary ~ * {
     box-shadow: 0 0 15px rgb(0, 157, 255);
   }
 }
-
 
 .stations {
   display: grid;
@@ -470,6 +451,9 @@ details[open] summary ~ * {
 }
 
 @media only screen and (max-width: 600px) {
+  .App{
+    background-animation: none;
+  }
   .stations {
     grid-template-columns: repeat(2, 50%);
   }

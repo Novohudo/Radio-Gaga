@@ -14,10 +14,10 @@ export default function Radio() {
 	const [stream, setStream] = useState([])
 	const [selectedCountry, setSelectedCountry] = useState(null)
 	const [animationLogo, setAnimationLogo] = useState(false)
-	const [rerender,setRerender] = useState(false)
-	const [isActive,setIsActive] = useState(null)
-	const [showNotification,setShowNotification] = useState(false);
-	const [showStationsList,setShowStationsList] = useState(false);
+	const [rerender, setRerender] = useState(false)
+	const [isActive, setIsActive] = useState(null)
+	const [showNotification, setShowNotification] = useState(false);
+	const [showStationsList, setShowStationsList] = useState(false);
 
 	useEffect(() => {
 		SetupApi(stationFilter, selectedCountry).then(data => {
@@ -25,15 +25,17 @@ export default function Radio() {
 		})
 	}, [stationFilter, selectedCountry])
 
-	useEffect(()=>{
+	useEffect(() => {
 		setRerender(false)
-	},[rerender])
+	}, [rerender])
 
+
+	//!React-Transition-Group - learn and do////////////////////
 
 	return (
-		<div className={"radio"} >
+		<div className={"radio"}>
 			<h6>GaGa Radio Player</h6>
-			<hr/>
+			<div className={'customHr'}/>
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer
@@ -49,11 +51,11 @@ export default function Radio() {
 					autoPlayAfterSrcChange={true}
 				/>
 			</div>
-					{showNotification && (
-						<div className={'notificationBox'}>
-							<p className="notification">added to favorite</p>
-						</div>
-					)}
+			{showNotification && (
+				<div className={'notificationBox'}>
+					<p className="notification">added to favorite</p>
+				</div>
+			)}
 			<details open>
 				<summary>Favorites</summary>
 				<Favorites
@@ -64,7 +66,7 @@ export default function Radio() {
 					setStream={setStream}
 				/>
 			</details>
-			<hr/>
+			<div className={'customHr'}/>
 			<details open>
 				<summary>Choose country</summary>
 				<Countries
@@ -72,16 +74,16 @@ export default function Radio() {
 					selectedCountry={selectedCountry}
 					setSelectedCountry={setSelectedCountry}/>
 			</details>
-			<hr/>
+			<div className={'customHr'}/>
 			<details open>
 				<summary>Pick a genre</summary>
 				<Filters
 					stationFilter={stationFilter}
 					setStationFilter={setStationFilter}/>
 			</details>
-			<hr/>
+			<div className={'customHr'}/>
 			{showStationsList && (
-				<p>Choose stations</p>
+				<p>Choose a station</p>
 			)}
 			<Stations
 				setShowNotification={setShowNotification}
