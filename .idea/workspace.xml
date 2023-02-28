@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="notification element(add to favorite)">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="animation fix(to-many trash)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,8 @@
       <workItem from="1676998416237" duration="14258000" />
       <workItem from="1677400605902" duration="23788000" />
       <workItem from="1677437158327" duration="64000" />
-      <workItem from="1677519295498" duration="300000" />
+      <workItem from="1677519295498" duration="608000" />
+      <workItem from="1677591336816" duration="3229000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -289,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677424832680</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="animation fix(to-many trash)">
+      <created>1677519867399</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1677519867399</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +317,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Clear base" />
     <MESSAGE value="Radio.js component" />
     <MESSAGE value="http.fix" />
@@ -333,6 +341,7 @@
     <MESSAGE value="toggle style  on click between (Stations-Favorites)" />
     <MESSAGE value="theme change(dark neon)" />
     <MESSAGE value="notification element(add to favorite)" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification element(add to favorite)" />
+    <MESSAGE value="animation fix(to-many trash)" />
+    <option name="LAST_COMMIT_MESSAGE" value="animation fix(to-many trash)" />
   </component>
 </project>

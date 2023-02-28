@@ -47,7 +47,6 @@ export default function Radio() {
 					customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
 					autoPlayAfterSrcChange={true}
 				/>
-
 			</div>
 					{showNotification && (
 						<div className={'notificationBox'}>
