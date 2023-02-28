@@ -452,7 +452,7 @@ details {
 
 @media only screen and (max-width: 600px) {
   .App{
-    background-animation: none;
+    animation: none;
   }
   .stations {
     grid-template-columns: repeat(2, 50%);
