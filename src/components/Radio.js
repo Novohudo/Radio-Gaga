@@ -7,6 +7,7 @@ import Countries from "./elements/Countries";
 import Filters from "./elements/Filters";
 import Stations from "./elements/Stations";
 import Favorites from "./localStore/Favorites";
+import Loader from "./elements/loader/Loader";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
@@ -30,8 +31,6 @@ export default function Radio() {
 	}, [rerender])
 
 
-	//!React-Transition-Group - learn and do////////////////////
-	//!Pagination for Stations
 
 	return (
 		<div className={"radio"}>

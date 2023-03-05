@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import error from "../../img/radio.svg";
 import like from "../../img/like.svg";
 
-const Stations = ({stations, setStream, setRerender,isActive,setIsActive,setShowNotification}) => {
+const Stations = ({stations, setStream, setRerender, isActive, setIsActive, setShowNotification}) => {
 	const arr = JSON.parse(localStorage.getItem('result')) || [];
 
 	function saveToFavorite(station) {
@@ -14,7 +14,7 @@ const Stations = ({stations, setStream, setRerender,isActive,setIsActive,setShow
 
 	const showMessage = () => {
 		setShowNotification(true);
-		setTimeout(()=> setShowNotification(false),2000)
+		setTimeout(() => setShowNotification(false), 2000)
 	};
 
 	function activeStationItem(station) {
@@ -25,7 +25,6 @@ const Stations = ({stations, setStream, setRerender,isActive,setIsActive,setShow
 			previousActiveEl.classList.remove('active');
 		}
 	}
-
 
 	return (
 		<div className="stations">

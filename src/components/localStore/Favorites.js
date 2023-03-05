@@ -22,6 +22,7 @@ const Favorites = ({setStream, setRerender,isActive,setIsActive}) => {
 		el.classList.toggle('active');
 	}
 
+
 	return (
 		<div className="favorites">
 			{arr &&

@@ -138,6 +138,37 @@ details {
   font-size: 1.3em;
   cursor: pointer;
 }
+details[open] summary~* {
+  animation: slide .3s ease-in-out;
+}
+
+@keyframes slide {
+  0% {opacity: 0; margin-left: -20px}
+  100% {opacity: 1; margin-left: 0px}
+}
+
+
+.intro-box{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  padding-top: 50%;
+  .app-name{
+    font-size: 15px;
+    letter-spacing: 6px;
+  }
+  .loader{
+    text-align: center;
+    padding-top: 50px;
+  }
+  .designer{
+    font-size: 8px;
+    padding-top: 50px;
+    letter-spacing: 1px;
+  }
+}
 
 
 .App {
@@ -152,6 +183,7 @@ details {
 }
 
 .radio {
+  animation: slide .4s ease-in-out;
   .player-body {
     border-bottom: 8px double rgba(9, 241, 221, 0.13);
     backdrop-filter: blur(12px);
@@ -206,6 +238,17 @@ details {
     backdrop-filter: blur(12px);
     border-radius: 10px;
 
+    animation: opacity .4s ease-in-out;
+    @keyframes opacity {
+      0%{
+        opacity: 0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+
+
     .notification {
       font-size: 15px;
       text-align: center;
@@ -225,6 +268,7 @@ details {
   border-bottom: 4px double rgba(9, 241, 221, 0.1);
   padding: 1em;
   margin-top: 1em;
+
 
   .favorite {
     display: flex;
@@ -275,6 +319,7 @@ details {
         font-size: 13px;
       }
     }
+
 
   }
 
@@ -331,12 +376,14 @@ details {
   width: 100%;
   cursor: pointer;
 
+
   .station {
     padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: slide .3s ease-in-out;
 
     img {
       border: 2px dotted #ffffff;
@@ -380,6 +427,60 @@ details {
     }
   }
 }
+.loader-box{
+  display: flex;
+  width: 100vw;
+
+}
+.loader-waves{
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.loader-waves div{
+  position: absolute;
+  border: 4px solid  #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+}
+.loader-waves div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
 
 
 .rhap_container.player {
@@ -464,7 +565,6 @@ details {
     height: 150px;
     padding: 8px;
   }
-
   .stationName {
     font-size: 13px;
     width: 50%;
@@ -475,8 +575,7 @@ details {
     margin: 0 0 0 5em;
   }
   .notificationBox {
-    width: 100% !important;
-    margin: 0 !important;
-    border-radius: 0 !important;
+    margin: 0 auto !important;
+    border-radius: 5px !important;
   }
 }
