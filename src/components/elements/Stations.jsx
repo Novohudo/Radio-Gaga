@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import error from "../../img/radio.svg";
 import like from "../../img/like.svg";
 
@@ -25,6 +25,7 @@ const Stations = ({stations, setStream, setRerender, isActive, setIsActive, setS
 			previousActiveEl.classList.remove('active');
 		}
 	}
+	console.log('rerender')
 
 	return (
 		<div className="stations">

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="save changes">
-      <change afterPath="$PROJECT_DIR$/src/components/elements/loader/Loader.js" afterDir="false" />
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="Loader component on before App start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/elements/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Stations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/localStore/Favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localStore/Favorites.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Countries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Countries.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Filters.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/Stations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/Stations.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/elements/loader/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/elements/loader/Loader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/radio.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/radio.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +115,8 @@
       <workItem from="1677591336816" duration="9261000" />
       <workItem from="1677774762063" duration="7627000" />
       <workItem from="1677784635115" duration="3248000" />
-      <workItem from="1677954707556" duration="7935000" />
+      <workItem from="1677954707556" duration="11894000" />
+      <workItem from="1678022445996" duration="3341000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -333,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677601317408</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Loader component on before App start">
+      <created>1678015448131</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678015448131</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +361,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="structure change" />
     <MESSAGE value="style-update" />
     <MESSAGE value="country-pick" />
     <MESSAGE value="ui modification(0.1)" />
@@ -377,6 +385,7 @@
     <MESSAGE value="update 0.1" />
     <MESSAGE value="&lt;ht/&gt; - styles not work on mobile devices(fix)" />
     <MESSAGE value="save changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="save changes" />
+    <MESSAGE value="Loader component on before App start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loader component on before App start" />
   </component>
 </project>

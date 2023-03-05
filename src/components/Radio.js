@@ -9,6 +9,7 @@ import Stations from "./elements/Stations";
 import Favorites from "./localStore/Favorites";
 import Loader from "./elements/loader/Loader";
 
+
 export default function Radio() {
 	const [stations, setStations] = useState(null);
 	const [stationFilter, setStationFilter] = useState("all")
@@ -19,17 +20,22 @@ export default function Radio() {
 	const [isActive, setIsActive] = useState(null)
 	const [showNotification, setShowNotification] = useState(false);
 	const [showStationsList, setShowStationsList] = useState(false);
+	const [isLoading,setIsLoading] = useState(false)
 
 	useEffect(() => {
+		setIsLoading(true)
 		SetupApi(stationFilter, selectedCountry).then(data => {
 			setStations(data)
+			setTimeout(()=>{
+				setIsLoading(false)
+			},1000)
+
 		})
 	}, [stationFilter, selectedCountry])
 
 	useEffect(() => {
 		setRerender(false)
 	}, [rerender])
-
 
 
 	return (
@@ -85,15 +91,17 @@ export default function Radio() {
 			{showStationsList && (
 				<p>Choose a station</p>
 			)}
-			<Stations
-				setShowNotification={setShowNotification}
-				isActive={isActive}
-				setIsActive={setIsActive}
-				setRerender={setRerender}
-				stations={stations}
-				setStream={setStream}
-				stream={stream}
-			/>
+			{isLoading ? (<Loader/>) :
+				<Stations
+					setShowNotification={setShowNotification}
+					isActive={isActive}
+					setIsActive={setIsActive}
+					setRerender={setRerender}
+					stations={stations}
+					setStream={setStream}
+					stream={stream}
+				/>
+			}
 		</div>
 	)
 };
