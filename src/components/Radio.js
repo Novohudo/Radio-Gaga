@@ -39,8 +39,7 @@ export default function Radio() {
 
 	return (
 		<div className={"radio"}>
-			<h6>GaGa Radio Player</h6>
-			<div className={'customHr'}/>
+
 			<div className={"player-body"}>
 				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
 				<H5AudioPlayer

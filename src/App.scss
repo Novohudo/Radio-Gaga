@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+@mixin customBorder{
+  border-bottom: 8px double rgba(0, 157, 255, 0.29);
+  box-shadow: 0 0 40px 15px #0090ff;
+  overflow: hidden;
+}
 @mixin colorGradient {
   background: linear-gradient(179deg, #1e00ff, #6500ff, #ff0000);
   background-size: 600% 600%;
@@ -80,7 +85,7 @@ html {
 
 body {
   color: rgb(255, 255, 255);
-  text-shadow: 4px 4px 10px rgba(9, 241, 221, 1);
+  text-shadow: 5px 5px 5px rgba(0, 157, 255, 1);
 }
 p{
   text-align: center;
@@ -114,12 +119,10 @@ h2 {
   text-align: center;
 }
 
-hr {
-  color: rgba(9, 241, 221, 0.29);;
-  margin: 0;
-}
+
 .customHr{
-  border-bottom: 3px double rgba(9, 241, 221, 0.29);
+  border:1px solid rgba(0, 144, 255, 0.44);
+  box-shadow: 0 0 10px 2px rgba(0, 144, 255, 0.8);
   width: 100%;
 }
 
@@ -180,10 +183,8 @@ details[open] summary~* {
 }
 
 .radio {
-  border: 2px solid rgba(9, 241, 221, 0.13);
   animation: slide .4s ease-in-out;
   .player-body {
-    border-bottom: 8px double rgba(9, 241, 221, 0.13);
     backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
@@ -193,11 +194,21 @@ details[open] summary~* {
     height: 9em;
     padding: 7px;
     z-index: 1;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), inset 0px -3px 12px rgba(2, 119, 255, 0.2);
 
     .static-logo {
       @include logoImage;
       border: 2px solid rgb(255, 255, 255);
       box-shadow: 0 0 5px #ffffff;
+      animation: opacity .2s ease-in-out;
+      @keyframes opacity {
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
     }
 
     .animated-logo {
@@ -216,7 +227,6 @@ details[open] summary~* {
       }
     }
   }
-  border: 3px double rgba(9, 241, 221, 0.13);
   min-height: 100em;
   max-width: 60em;
   width: 100%;
@@ -261,8 +271,6 @@ details[open] summary~* {
   max-width: 100%;
   cursor: pointer;
   overflow: auto;
-  border-top: 4px double rgba(9, 241, 221, 0.1);
-  border-bottom: 4px double rgba(9, 241, 221, 0.1);
   padding: 1em;
   margin-top: 1em;
 
@@ -402,10 +410,12 @@ details[open] summary~* {
       height: 100%;
       align-items: center;
 
+
       img {
         width: 5em;
         height: 5em;
         margin: 0;
+
       }
 
       .save-button {
@@ -552,7 +562,7 @@ details[open] summary~* {
 
 @media only screen and (max-width: 600px) {
   .App{
-    animation: none;
+    //animation: none;
   }
   .stations {
     grid-template-columns: repeat(2, 50%);
