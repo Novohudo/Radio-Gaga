@@ -28,7 +28,7 @@ export default function Radio() {
 			setStations(data)
 			setTimeout(()=>{
 				setIsLoading(false)
-			},1000)
+			},500)
 
 		})
 	}, [stationFilter, selectedCountry])
@@ -36,7 +36,6 @@ export default function Radio() {
 	useEffect(() => {
 		setRerender(false)
 	}, [rerender])
-
 
 	return (
 		<div className={"radio"}>
@@ -91,7 +90,7 @@ export default function Radio() {
 			{showStationsList && (
 				<p>Choose a station</p>
 			)}
-			{isLoading ? (<Loader/>) :
+			{isLoading ? (<div className={'pre-loader'}><Loader/></div>) :
 				<Stations
 					setShowNotification={setShowNotification}
 					isActive={isActive}

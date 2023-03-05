@@ -477,7 +477,10 @@ details[open] summary~* {
   }
 }
 
-
+.pre-loader{
+  display: flex;
+  padding-top: 10%;
+}
 
 .rhap_container.player {
   background-color: rgba(0, 0, 0, 0);
