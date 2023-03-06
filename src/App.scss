@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@mixin glassBoarder{
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), inset 0px -3px 12px rgba(2, 119, 255, 0.2);
+}
+@mixin filtersStyle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 7px;
+  margin-bottom: 1.8em;
+  margin-top: 1em;
+  letter-spacing: 3px;
+  max-width: 59em;
+  cursor: pointer;
+  padding: 7px;
+  @include glassBoarder;
+  text-transform: uppercase;
+  span {
+    font-size: 0.9rem;
+    margin: 0.25em;
+    border-radius: 10px;
+    padding: 0.25em 0.75em;
+    transition-duration: 0.3s;
+  }
 
-@mixin customBorder{
+  .selected {
+    box-shadow: 0 0 10px rgb(0, 157, 255);
+  }
+}
+
+@mixin customBorder {
   border-bottom: 8px double rgba(0, 157, 255, 0.29);
   box-shadow: 0 0 40px 15px #0090ff;
   overflow: hidden;
 }
+
 @mixin colorGradient {
   background: linear-gradient(179deg, #1e00ff, #6500ff, #ff0000);
   background-size: 600% 600%;
@@ -16,46 +45,46 @@
 
   @-webkit-keyframes AnimationName {
     0% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
     50% {
       background-position: 53% 100%
     }
     100% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
   }
   @-moz-keyframes AnimationName {
     0% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
     50% {
       background-position: 53% 100%
     }
     100% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
   }
   @-o-keyframes AnimationName {
     0% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
     50% {
       background-position: 53% 100%
     }
     100% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
   }
   @keyframes AnimationName {
     0% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
     50% {
       background-position: 53% 100%
     }
     100% {
-      background-position: 48% 0%
+      background-position: 48% 0
     }
   }
 
@@ -80,18 +109,19 @@ html {
   -ms-user-select: none;
   user-select: none;
   background-color: #000000;
-
 }
 
 body {
   color: rgb(255, 255, 255);
   text-shadow: 5px 5px 5px rgba(0, 157, 255, 1);
 }
-p{
+
+p {
   text-align: center;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 1em;
+  letter-spacing: 5px;
 }
+
 img {
   display: block;
   width: 3.5em;
@@ -107,11 +137,7 @@ h6 {
   padding: 7px;
   background-color: rgba(0, 0, 0, 0.49);
   font-weight: lighter;
-  letter-spacing:1px;
-}
-
-h2, h3 {
-  text-align: center;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -119,56 +145,64 @@ h2 {
   text-align: center;
 }
 
-
-.customHr{
-  border:1px solid rgba(0, 144, 255, 0.44);
+.customHr {
+  border: 1px solid rgba(0, 144, 255, 0.44);
   box-shadow: 0 0 10px 2px rgba(0, 144, 255, 0.8);
-  width: 100%;
-}
-
-audio {
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
 }
 
 details {
   margin: 15px 0 15px 0;
-  letter-spacing: 1px;
   text-align: center;
-  font-size: 1.3em;
   cursor: pointer;
+  letter-spacing: 1px;
 }
-details[open] summary~* {
+summary{
+  font-size: 1.1em;
+  letter-spacing: 4px;
+  line-height: 25px;
+
+}
+
+details[open] summary ~ * {
   animation: slide .3s ease-in-out;
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      margin-left: -20px
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0
+    }
+  }
 }
 
-@keyframes slide {
-  0% {opacity: 0; margin-left: -20px}
-  100% {opacity: 1; margin-left: 0px}
-}
-
-
-.intro-box{
+.intro-box {
   display: flex;
   flex-direction: column;
   align-content: center;
   width: 100vw;
   background-color: rgb(0, 0, 0);
   padding-top: 30%;
-  .app-name{
+
+  .app-name {
     font-size: 15px;
     letter-spacing: 6px;
   }
-  .loader{
+
+  .loader {
     text-align: center;
     padding-top: 50px;
   }
-  .designer{
+
+  .designer {
     font-size: 8px;
     padding-top: 50px;
     letter-spacing: 1px;
   }
 }
-
 
 .App {
   display: flex;
@@ -179,33 +213,38 @@ details[open] summary~* {
   margin: 0 auto;
   font-family: Lato, serif;
   @include colorGradient;
-
 }
 
 .radio {
+  min-height: 100em;
+  max-width: 60em;
+  width: 100%;
+  --borderWidth: 0px;
+  position: relative;
   animation: slide .4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.74);
+
   .player-body {
-    backdrop-filter: blur(12px);
     display: flex;
     align-items: center;
+    height: 10em;
+    padding: 7px;
+    backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.49);
     position: sticky;
     top: 0;
-    height: 9em;
-    padding: 7px;
     z-index: 1;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), inset 0px -3px 12px rgba(2, 119, 255, 0.2);
-
+    @include glassBoarder;
     .static-logo {
       @include logoImage;
       border: 2px solid rgb(255, 255, 255);
       box-shadow: 0 0 5px #ffffff;
       animation: opacity .2s ease-in-out;
       @keyframes opacity {
-        0%{
+        0% {
           opacity: 0;
         }
-        100%{
+        100% {
           opacity: 1;
         }
       }
@@ -227,40 +266,37 @@ details[open] summary~* {
       }
     }
   }
-  min-height: 100em;
-  max-width: 60em;
-  width: 100%;
-  --borderWidth: 0px;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.74);
 
   .notificationBox {
-    height: 5em;
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.38);
     position: fixed;
-    top: 37em;
-    left: 0;
-    margin-left: 37%;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     backdrop-filter: blur(12px);
     border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), inset 0px -3px 12px rgba(2, 119, 255, 0.2);
+    z-index: 1;
 
-    animation: opacity .4s ease-in-out;
+    animation: opacity 0.4s ease-in-out;
     @keyframes opacity {
-      0%{
+      0% {
         opacity: 0;
       }
-      100%{
+      100% {
         opacity: 1;
       }
     }
+  }
 
-
-    .notification {
-      font-size: 15px;
-      text-align: center;
-      padding-top: 1em;
-    }
+  .notification {
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
   }
 
 }
@@ -273,20 +309,14 @@ details[open] summary~* {
   overflow: auto;
   padding: 1em;
   margin-top: 1em;
-
+  margin: 7px;
+  @include glassBoarder;
 
   .favorite {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1em;
-
     img {
-      border: 2px solid #ffffff;
+      border: 2px solid rgba(2, 120, 255, 0.35);
       box-shadow: 0 0 40px rgb(0, 0, 0);
     }
-
     .active {
       img {
         border: 2px solid rgb(0, 157, 255);
@@ -301,7 +331,7 @@ details[open] summary~* {
       max-width: 100%;
       max-height: 100%;
       align-items: center;
-      transition-duration: 0.3s;
+      margin: 1em;
 
       .deleteButton {
         border: none;
@@ -316,70 +346,31 @@ details[open] summary~* {
         }
 
       }
-
       .favoriteName {
         width: 80%;
         text-align: center;
         margin-top: 1em;
         font-size: 13px;
+        letter-spacing: 1px;
       }
     }
-
-
   }
-
 }
-
 .countries {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  font-size: 1.2rem;
-  width: 100%;
-  cursor: pointer;
-
-  span {
-    margin: 0.25em;
-    border-radius: 10px;
-    padding: 0.25em 0.75em;
-    transition-duration: 0.3s;
-  }
-
-  .selected {
-    box-shadow: 0 0 15px rgb(0, 157, 255);
-
-  }
+  @include filtersStyle;
 }
-
 .filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  font-size: 1.2rem;
-  width: 100%;
-  cursor: pointer;
-
-  span {
-    margin: 0.25em;
-    border-radius: 10px;
-    padding: 0.25em 0.75em;
-    transition-duration: 0.3s;
-  }
-
-  .selected {
-    box-shadow: 0 0 15px rgb(0, 157, 255);
-  }
+  @include filtersStyle;
 }
 
 .stations {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  width: 100%;
+  text-align: center;
+  max-width: 59em;
   cursor: pointer;
+  margin: 7px;
+  @include glassBoarder;
 
   .station {
     padding: 1em;
@@ -388,9 +379,10 @@ details[open] summary~* {
     align-items: center;
     justify-content: center;
     animation: slide .3s ease-in-out;
+    border: none;
 
     img {
-      border: 2px solid #ffffff;
+      border: 2px solid rgba(2, 120, 255, 0.35);
       box-shadow: 0 0 40px rgb(0, 0, 0);
     }
 
@@ -410,21 +402,17 @@ details[open] summary~* {
       height: 100%;
       align-items: center;
 
-
       img {
         width: 5em;
         height: 5em;
         margin: 0;
-
       }
-
       .save-button {
         cursor: pointer;
         background: none;
         font-size: 20px;
         border: none;
         margin: 0 0 0 3em;
-
         img {
           width: 1.5em;
           height: 1.5em;
@@ -433,61 +421,60 @@ details[open] summary~* {
     }
   }
 }
-.loader-box{
+
+.loader-box {
   display: flex;
   width: 100vw;
-
 }
-.loader-waves{
+.loader-waves {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
   margin: 0 auto;
 }
-.loader-waves div{
+.loader-waves div {
   position: absolute;
-  border: 4px solid  #fff;
+  border: 4px solid #fff;
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
 }
 .loader-waves div:nth-child(2) {
   animation-delay: -0.5s;
 }
-@keyframes lds-ripple {
-  0% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  4.9% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  5% {
-    top: 36px;
-    left: 36px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 72px;
-    height: 72px;
-    opacity: 0;
-  }
-}
 
-.pre-loader{
+.pre-loader {
   display: flex;
   padding-top: 10%;
 }
@@ -562,7 +549,7 @@ details[open] summary~* {
 
 @media only screen and (max-width: 600px) {
   .App{
-    //animation: none;
+    background: #4000ff;
   }
   .stations {
     grid-template-columns: repeat(2, 50%);
@@ -579,15 +566,10 @@ details[open] summary~* {
     width: 50%;
     margin-top: 10px;
   }
-  .save-button {
-    margin: 0;
-    margin: 0 0 0 5em;
+  .notification {
+    font-size: 10px !important;
   }
-  .notificationBox {
-    margin: 0 auto !important;
-    border-radius: 5px !important;
-  }
-  .intro-box{
+  .intro-box {
     padding-top: 50%;
   }
 }

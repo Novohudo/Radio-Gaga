@@ -55,11 +55,11 @@ export default function Radio() {
 			</div>
 			{showNotification && (
 				<div className={'notificationBox'}>
-					<p className={'notification'}>added to favorite</p>
+					<p className={'notification'}>ADDED TO FAVORITE</p>
 				</div>
 			)}
 			<details open>
-				<summary>Favorites</summary>
+				<summary>FAVORITES</summary>
 
 				<Favorites
 					setShowNotification={setShowNotification}
@@ -71,7 +71,7 @@ export default function Radio() {
 			</details>
 			<div className={'customHr'}/>
 			<details open>
-				<summary>Choose country</summary>
+				<summary>CHOOSE A COUNTRY</summary>
 
 				<Countries
 					setShowStationsList={setShowStationsList}
@@ -80,7 +80,7 @@ export default function Radio() {
 			</details>
 			<div className={'customHr'}/>
 			<details open>
-				<summary>Pick a genre</summary>
+				<summary>PICK A GENRE</summary>
 
 				<Filters
 					stationFilter={stationFilter}
@@ -89,7 +89,7 @@ export default function Radio() {
 			<div className={'customHr'}/>
 
 			{showStationsList && (
-				<p>Choose a station</p>
+				<p>CHOOSE A STATION</p>
 			)}
 			{isLoading ? (<div className={'pre-loader'}><Loader/></div>) :
 				<Stations

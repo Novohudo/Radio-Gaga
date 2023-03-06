@@ -6,11 +6,10 @@ export const SetupApi = async (stationFilter, selectedCountry) => {
 	const stations = await api.searchStations({
 		"country": selectedCountry,
 		tag: stationFilter,
-		limit: 30,
+		limit: 20,
 	})
 	.then(data => {
 		return data
 	})
 	return stations;
-
 }
