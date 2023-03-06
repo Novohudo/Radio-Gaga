@@ -12,39 +12,37 @@ import Loader from "./elements/loader/Loader";
 
 export default function Radio() {
 	const [stations, setStations] = useState(null);
-	const [stationFilter, setStationFilter] = useState("all")
-	const [stream, setStream] = useState([])
-	const [selectedCountry, setSelectedCountry] = useState(null)
-	const [animationLogo, setAnimationLogo] = useState(false)
-	const [rerender, setRerender] = useState(false)
-	const [isActive, setIsActive] = useState(null)
+	const [stationFilter, setStationFilter] = useState("all");
+	const [stream, setStream] = useState([]);
+	const [selectedCountry, setSelectedCountry] = useState(null);
+	const [animationLogo, setAnimationLogo] = useState(false);
+	const [rerender, setRerender] = useState(false);
+	const [isActive, setIsActive] = useState(null);
 	const [showNotification, setShowNotification] = useState(false);
 	const [showStationsList, setShowStationsList] = useState(false);
-	const [isLoading,setIsLoading] = useState(false)
+	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		setIsLoading(true)
+		setIsLoading(true);
 		SetupApi(stationFilter, selectedCountry).then(data => {
-			setStations(data)
-			setTimeout(()=>{
+			setStations(data);
+			setTimeout(() => {
 				setIsLoading(false)
-			},500)
-
+			}, 500);
 		})
 	}, [stationFilter, selectedCountry])
 
 	useEffect(() => {
-		setRerender(false)
-	}, [rerender])
+		setRerender(false);
+	}, [rerender]);
 
 	return (
-		<div className={"radio"}>
-
-			<div className={"player-body"}>
-				<img className={animationLogo === true ? "animated-logo" : "static-logo"} src={stream.favicon || error}/>
+		<div className={'radio'}>
+			<div className={'player-body'}>
+				<img className={animationLogo === true ? 'animated-logo' : 'static-logo'} src={stream.favicon || error}/>
 				<H5AudioPlayer
-					header={stream.name}
 					className={"player"}
+					header={stream.name}
 					src={stream.urlResolved}
 					layout={"stacked-reverse"}
 					onPlay={() => setAnimationLogo(true)}
@@ -57,11 +55,12 @@ export default function Radio() {
 			</div>
 			{showNotification && (
 				<div className={'notificationBox'}>
-					<p className="notification">added to favorite</p>
+					<p className={'notification'}>added to favorite</p>
 				</div>
 			)}
 			<details open>
 				<summary>Favorites</summary>
+
 				<Favorites
 					setShowNotification={setShowNotification}
 					isActive={isActive}
@@ -73,6 +72,7 @@ export default function Radio() {
 			<div className={'customHr'}/>
 			<details open>
 				<summary>Choose country</summary>
+
 				<Countries
 					setShowStationsList={setShowStationsList}
 					selectedCountry={selectedCountry}
@@ -81,11 +81,13 @@ export default function Radio() {
 			<div className={'customHr'}/>
 			<details open>
 				<summary>Pick a genre</summary>
+
 				<Filters
 					stationFilter={stationFilter}
 					setStationFilter={setStationFilter}/>
 			</details>
 			<div className={'customHr'}/>
+
 			{showStationsList && (
 				<p>Choose a station</p>
 			)}
@@ -101,5 +103,5 @@ export default function Radio() {
 				/>
 			}
 		</div>
-	)
+	);
 };

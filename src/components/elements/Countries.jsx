@@ -1,8 +1,7 @@
 import React from 'react';
 import {countries} from "../filters/filters";
 
-
-const Countries = ({selectedCountry,setSelectedCountry,setShowStationsList}) => {
+const Countries = ({selectedCountry, setSelectedCountry, setShowStationsList}) => {
 
 	function handleClick(country) {
 		setSelectedCountry(country);
@@ -10,10 +9,10 @@ const Countries = ({selectedCountry,setSelectedCountry,setShowStationsList}) => 
 	}
 
 	return (
-		<div className={"countries"}>
+		<div className={'countries'}>
 			{countries.map((country, index) => (
 				<span
-					className={selectedCountry === country ? "selected" : ""}
+					className={selectedCountry === country ? 'selected' : ''}
 					key={index}
 					onClick={() => handleClick(country)}>
 						{country}

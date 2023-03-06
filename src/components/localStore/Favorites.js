@@ -2,14 +2,8 @@ import React from 'react';
 import error from "../../img/radio.svg";
 import clear from "../../img/clear.svg";
 
-const Favorites = ({setStream, setRerender,isActive,setIsActive}) => {
+const Favorites = ({setStream, setRerender, isActive, setIsActive}) => {
 	let arr = JSON.parse(localStorage.getItem('result')) || [];
-
-	const handleDelete = (id) => {
-		const newArr = arr.filter((station) => station.id !== id);
-		localStorage.setItem('result', JSON.stringify(newArr));
-		setRerender(true)
-	}
 
 	function activeFavoriteItem(station) {
 		setStream(station);
@@ -22,24 +16,29 @@ const Favorites = ({setStream, setRerender,isActive,setIsActive}) => {
 		el.classList.toggle('active');
 	}
 
+	const handleDelete = (id) => {
+		const newArr = arr.filter((station) => station.id !== id);
+		localStorage.setItem('result', JSON.stringify(newArr));
+		setRerender(true);
+	}
 
 	return (
-		<div className="favorites">
+		<div className={'favorites'}>
 			{arr &&
 				arr.map((station) => {
 					return (
-						<div className="favorite">
-							<div className={`favoriteBlock ${isActive === station ? "active" : ""}`} data-id={station.id}>
+						<div className={'favorite'}>
+							<div className={`favoriteBlock ${isActive === station ? 'active' : ""}`} data-id={station.id}>
 								<img
 									onClick={() => activeFavoriteItem(station)}
 									src={station.favicon || error}
-									alt="station logo"
+									alt={'station logo'}
 								/>
-								<button onClick={() => handleDelete(station.id)} className={"deleteButton"}><img src={clear}/></button>
-								<div className="favoriteName">{station.name}</div>
+								<button onClick={() => handleDelete(station.id)} className={'deleteButton'}><img src={clear}/></button>
+								<div className={'favoriteName'}>{station.name}</div>
 							</div>
 						</div>
-					)
+					);
 				})}
 		</div>
 	);

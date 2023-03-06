@@ -10,13 +10,14 @@ function App() {
 			setOnStart(false);
 		}, 2000);
 		return () => clearTimeout(timer);
-	}, [])
+	}, []);
 
 	return (
 		<div className={"App"}>
 			{onStart ?
-				<div className={"intro-box"}><p className={'app-name'}>GaGa Radio Player</p><div className={'loader'}><Loader/></div><p className={'designer'}>designed by Aleksey Umrikhin</p></div> :
-				<Radio/>}
+				<div className={'intro-box'}><p className={'app-name'}>GaGa Radio Player</p>
+					<div className={'loader'}><Loader/></div>
+					<p className={'designer'}>designed by Aleksey Umrikhin</p></div> : <Radio/>}
 		</div>
 	);
 }
