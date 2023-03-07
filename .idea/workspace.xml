@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="some code style fix">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="some code style fix(change main color &amp; box-shadows and test deploy on android)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/API-radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API-radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/localStore/Favorites.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/localStore/Favorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Radio.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,18 +25,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\umrix\OneDrive\Рабочий стол\Radio-Gaga\radio\src" />
@@ -115,7 +112,8 @@
       <workItem from="1677784635115" duration="3248000" />
       <workItem from="1677954707556" duration="11894000" />
       <workItem from="1678022445996" duration="11921000" />
-      <workItem from="1678108412589" duration="13422000" />
+      <workItem from="1678108412589" duration="18752000" />
+      <workItem from="1678209148632" duration="5297000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -369,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678111058885</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="some code style fix(change main color &amp; box-shadows and test deploy on android)">
+      <created>1678122317559</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1678122317559</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +393,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ui modification(0.3) colorfull background" />
     <MESSAGE value="ui modification(0.4) background problem.." />
     <MESSAGE value="final version" />
     <MESSAGE value="prevent the Blue highlighting of elements in Android" />
@@ -413,6 +417,7 @@
     <MESSAGE value="Preloader fix" />
     <MESSAGE value="some interface changes(style,color)" />
     <MESSAGE value="some code style fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="some code style fix" />
+    <MESSAGE value="some code style fix(change main color &amp; box-shadows and test deploy on android)" />
+    <option name="LAST_COMMIT_MESSAGE" value="some code style fix(change main color &amp; box-shadows and test deploy on android)" />
   </component>
 </project>

@@ -52,7 +52,9 @@ export default function Radio() {
 					customControlsSection={["MAIN_CONTROLS", "VOLUME_CONTROLS"]}
 					autoPlayAfterSrcChange={true}
 				/>
+				<a href={stream.homepage}>STATION HOMEPAGE</a>
 			</div>
+
 			{showNotification && (
 				<div className={'notificationBox'}>
 					<p className={'notification'}>ADDED TO FAVORITE</p>

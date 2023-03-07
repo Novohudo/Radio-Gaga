@@ -115,7 +115,16 @@ body {
   color: rgb(255, 255, 255);
   text-shadow: 5px 5px 5px rgba(0, 157, 255, 1);
 }
-
+a{
+  color: rgba(0, 157, 255, 1);
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 1em;
+  right: 37%;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 6px;
+}
 p {
   text-align: center;
   font-size: 1em;
@@ -162,7 +171,7 @@ summary{
   font-size: 1.1em;
   letter-spacing: 4px;
   line-height: 25px;
-
+  text-align: center;
 }
 
 details[open] summary ~ * {
@@ -200,7 +209,7 @@ details[open] summary ~ * {
   .designer {
     font-size: 8px;
     padding-top: 50px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
   }
 }
 
@@ -479,78 +488,59 @@ details[open] summary ~ * {
   padding-top: 10%;
 }
 
+//===================== ReactH5player ====.
+
+.rhap_main-controls button {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 157, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 2px rgb(0, 157, 255);
+}
+.rhap_progress-filled{
+  background-color: rgb(0, 157, 255)!important;
+  box-shadow: 0 0 10px 2px rgb(0, 157, 255);
+}
+.rhap_progress-indicator{
+  background-color: rgb(0, 157, 255)!important;
+}
+.rhap_volume-indicator{
+  background-color: rgb(0, 157, 255)!important;
+}
+.rhap_volume-bar{
+  background-color: rgb(0, 157, 255)!important;
+  box-shadow: 0 0 10px 2px rgb(0, 157, 255);
+}
+.rhap_progress-section .rhap_time {
+  color: rgb(0, 111, 255);
+
+}
+.rhap_volume-button svg{
+    color: rgb(0, 157, 255) !important;
+}
 .rhap_container.player {
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-items: center;
   padding: 0.25em 0.75em;
-  margin: 1em 0 0 0;
-  border-radius: 10px;
-  height: 6rem;
-  text-align: center;
-  color: white;
 }
 
-.rhap_progress-indicator {
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255) !important;
+.rhap_header{
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: right;
+  padding-top: -10em;
 }
-
-.rhap_progress-bar {
-  background-color: rgba(255, 255, 255, 0) !important;
+.rhap_main{
+  flex-direction: column-reverse!important;
 }
-
-.rhap_progress-filled {
-  background-color: rgb(255, 0, 0) !important;
-}
-
-.rhap_download-progress {
-  background-color: rgb(255, 255, 255) !important;
-}
-
-.rhap_time {
-  font-size: 12px !important;
-  color: white !important;
-}
-
-.rhap_volume-bar {
-  background-color: rgb(255, 0, 0) !important;
-}
-
-.rhap_volume-indicator {
-  background-color: rgb(255, 255, 255) !important;
-}
-
-.rhap_volume-button {
-  svg {
-    color: rgb(255, 255, 255) !important;
-  }
-}
-
-.rhap_stacked .rhap_controls-section {
-  margin-top: 0 !important;
-
-}
-
-.rhap_controls-section .rhap_volume-controls {
-  justify-content: right;
-  color: #fffefe;
-}
-
-.rhap_controls-section .rhap_main-controls button[aria-label="Play"] svg path {
-  fill: rgb(255, 255, 255) !important;
-
-}
-
-.rhap_controls-section .rhap_main-controls button[aria-label="Pause"] svg path {
-  fill: rgb(255, 255, 255) !important;
-
-}
+//==========================================
 
 @media only screen and (max-width: 600px) {
   .App{
     background: #4000ff;
   }
+
   .stations {
     grid-template-columns: repeat(2, 50%);
   }
@@ -571,5 +561,23 @@ details[open] summary ~ * {
   }
   .intro-box {
     padding-top: 50%;
+  }
+  .rhap_volume-bar {
+    display: none;
+  }
+  .rhap_volume-button {
+    display: none;
+  }
+  .rhap_container.player{
+    margin-top: -2em;
+  }
+  .rhap_main{
+    height: 2.5em;
+  }
+  a{
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    bottom: 2.2em;
+    right: 5%;
   }
 }
