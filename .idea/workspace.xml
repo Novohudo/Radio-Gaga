@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="some code style fix(change main color &amp; box-shadows and test deploy on android)">
+    <list default="true" id="797e5bca-5c5d-4c72-89bc-8c71a87d219e" name="Changes" comment="gh-pages test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Radio.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Radio.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,8 @@
       <workItem from="1677954707556" duration="11894000" />
       <workItem from="1678022445996" duration="11921000" />
       <workItem from="1678108412589" duration="18752000" />
-      <workItem from="1678209148632" duration="5297000" />
+      <workItem from="1678209148632" duration="5456000" />
+      <workItem from="1678380297608" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1674311607815</created>
@@ -374,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678122317559</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="gh-pages test">
+      <created>1678214590548</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1678214590548</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +400,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ui modification(0.4) background problem.." />
     <MESSAGE value="final version" />
     <MESSAGE value="prevent the Blue highlighting of elements in Android" />
     <MESSAGE value="code optimizations(0.1)" />
@@ -418,6 +424,7 @@
     <MESSAGE value="some interface changes(style,color)" />
     <MESSAGE value="some code style fix" />
     <MESSAGE value="some code style fix(change main color &amp; box-shadows and test deploy on android)" />
-    <option name="LAST_COMMIT_MESSAGE" value="some code style fix(change main color &amp; box-shadows and test deploy on android)" />
+    <MESSAGE value="gh-pages test" />
+    <option name="LAST_COMMIT_MESSAGE" value="gh-pages test" />
   </component>
 </project>
